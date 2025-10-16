@@ -1,5 +1,10 @@
 fileVersion: 1
 id: "1"
-macroString: ""
+macroString: |-
+  {% import "SNF-Test-Utility" as test with context %}
+
+  {%- macro jde_date(col) -%}
+      dateadd(day, to_number(right({{ col }}, 3)) - 1, to_date(1900 + to_number(left({{ col }}, 3))||'-01-01') )
+  {%- endmacro %}
 name: macro
 type: Macro

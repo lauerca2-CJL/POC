@@ -1,0 +1,259 @@
+fileVersion: 1
+id: f3dfa4e4-7b4f-451a-a86d-c53ce48c266c
+name: STG_COMBINED_REQS_2
+operation:
+  config:
+    insertStrategy: INSERT
+    postSQL: ""
+    preSQL: ""
+    testsEnabled: true
+    truncateBefore: true
+  database: ""
+  deployEnabled: true
+  description: Combined requirements joined with credentialing status
+  isMultisource: false
+  locationName: POC_SILVER
+  materializationType: table
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 019b0523-cd28-72c9-b5e5-272c61ed818e
+          stepCounter: f3dfa4e4-7b4f-451a-a86d-c53ce48c266c
+        config: {}
+        dataType: VARCHAR
+        description: ""
+        name: SCENARIO
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 019b0523-8fc5-7514-a409-8a237a77d3af
+                stepCounter: e6c1df37-b3cf-4c03-9220-54421c2626d9
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 019b0523-cd28-72c9-b5e5-2bceecdb7a77
+          stepCounter: f3dfa4e4-7b4f-451a-a86d-c53ce48c266c
+        config: {}
+        dataType: VARCHAR
+        description: ""
+        name: AQ_REQ
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 019b0523-8fc5-7514-a409-8e1185f94a31
+                stepCounter: e6c1df37-b3cf-4c03-9220-54421c2626d9
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 019b0523-cd28-72c9-b5e5-2c74b8e17eb9
+          stepCounter: f3dfa4e4-7b4f-451a-a86d-c53ce48c266c
+        config: {}
+        dataType: NUMBER
+        description: ""
+        name: REQ_MET_CONDITION_PHYS
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 019b0523-8fc5-7514-a409-93fec500d814
+                stepCounter: e6c1df37-b3cf-4c03-9220-54421c2626d9
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 019b0523-cd28-72c9-b5e5-333037f6ebee
+          stepCounter: f3dfa4e4-7b4f-451a-a86d-c53ce48c266c
+        config: {}
+        dataType: NUMBER
+        description: ""
+        name: REQ_MET_CONDITION_CSR
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 019b0523-8fc5-7514-a409-94da1a2e0a32
+                stepCounter: e6c1df37-b3cf-4c03-9220-54421c2626d9
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 019b0523-cd28-72c9-b5e5-36e434da1095
+          stepCounter: f3dfa4e4-7b4f-451a-a86d-c53ce48c266c
+        config: {}
+        dataType: VARCHAR
+        description: ""
+        name: AQ_FK
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 019b0523-8fc5-7514-a409-993b8eb324e9
+                stepCounter: e6c1df37-b3cf-4c03-9220-54421c2626d9
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 019b0523-cd28-72c9-b5e5-3bc4823218f2
+          stepCounter: f3dfa4e4-7b4f-451a-a86d-c53ce48c266c
+        config: {}
+        dataType: VARCHAR
+        description: ""
+        name: AQ_FK_GOV
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 019b0523-8fc5-7514-a409-9e5ed7ebe5fb
+                stepCounter: e6c1df37-b3cf-4c03-9220-54421c2626d9
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 019b0523-cd28-72c9-b5e5-3f3e01c83cad
+          stepCounter: f3dfa4e4-7b4f-451a-a86d-c53ce48c266c
+        config: {}
+        dataType: VARCHAR
+        description: ""
+        name: AQ_FK_IMLC
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 019b0523-8fc5-7514-a409-a18926bf4d0d
+                stepCounter: e6c1df37-b3cf-4c03-9220-54421c2626d9
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 019b0523-cd28-72c9-b5e5-42de2bb4ecb0
+          stepCounter: f3dfa4e4-7b4f-451a-a86d-c53ce48c266c
+        config: {}
+        dataType: VARCHAR
+        description: ""
+        name: STATE_ID
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 019b0523-8fc5-7514-a409-a433a937743b
+                stepCounter: e6c1df37-b3cf-4c03-9220-54421c2626d9
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 019b0523-cd28-72c9-b5e5-448082c29117
+          stepCounter: f3dfa4e4-7b4f-451a-a86d-c53ce48c266c
+        config: {}
+        dataType: BOOLEAN
+        description: ""
+        name: TELEMEDICINE__C
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 019b0523-8fc5-7514-a409-ab79dced2ec0
+                stepCounter: e6c1df37-b3cf-4c03-9220-54421c2626d9
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 019b0523-cd28-72c9-b5e5-4be0300cce03
+          stepCounter: f3dfa4e4-7b4f-451a-a86d-c53ce48c266c
+        config: {}
+        dataType: BOOLEAN
+        description: ""
+        name: _BOOL_GOV
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 019b0523-8fc5-7514-a409-acc5fa68ccaf
+                stepCounter: e6c1df37-b3cf-4c03-9220-54421c2626d9
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 019b0523-cd28-72c9-b5e5-4fd750d681ba
+          stepCounter: f3dfa4e4-7b4f-451a-a86d-c53ce48c266c
+        config: {}
+        dataType: VARCHAR
+        description: ""
+        name: CONTACT_ID
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 019b0523-8fc5-7514-a409-b17920244870
+                stepCounter: e6c1df37-b3cf-4c03-9220-54421c2626d9
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 019b0523-cd28-72c9-b5e5-538eee07e91b
+          stepCounter: f3dfa4e4-7b4f-451a-a86d-c53ce48c266c
+        config: {}
+        dataType: VARCHAR
+        description: ""
+        name: CANDIDATE_TYPE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 019b0523-8fc5-7514-a409-b4bf59f567d9
+                stepCounter: e6c1df37-b3cf-4c03-9220-54421c2626d9
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 019b0523-cd28-72c9-b5e5-57b5d32d9ab4
+          stepCounter: f3dfa4e4-7b4f-451a-a86d-c53ce48c266c
+        config: {}
+        dataType: VARCHAR
+        description: ""
+        name: CR_ID
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 019b0523-8fc5-7514-a409-b93c7fe53a14
+                stepCounter: e6c1df37-b3cf-4c03-9220-54421c2626d9
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 019b0523-cd28-72c9-b5e5-58d6eb0b08be
+          stepCounter: f3dfa4e4-7b4f-451a-a86d-c53ce48c266c
+        config: {}
+        dataType: DATE
+        description: ""
+        name: MAX_SHIFT_DATE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 019b0523-8fc5-7514-a409-be1e532d82f1
+                stepCounter: e6c1df37-b3cf-4c03-9220-54421c2626d9
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 019b0523-cd28-72c9-b5e5-5c2aeea8c3f9
+          stepCounter: f3dfa4e4-7b4f-451a-a86d-c53ce48c266c
+        config: {}
+        dataType: VARCHAR
+        description: ""
+        name: CRED_STATUS
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 019b0523-b1ba-74ab-aa2b-99bebbaad1dc
+                stepCounter: d0536d45-361a-4dc4-a8ac-8f06692e02e3
+            transform: ""
+    cteString: ""
+    description: ""
+    destinationName: ""
+    enabledColumnTestIDs: []
+    materializationOption: ""
+    sourceMapping:
+      - aliases:
+          STG_COMBINED_REQS: e6c1df37-b3cf-4c03-9220-54421c2626d9
+          STG_FINAL_CRED: d0536d45-361a-4dc4-a8ac-8f06692e02e3
+        customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: POC_SILVER
+            nodeName: STG_COMBINED_REQS
+          - locationName: POC_SILVER
+            nodeName: STG_FINAL_CRED
+        join:
+          joinCondition: |-
+            FROM {{ ref('POC_SILVER', 'STG_COMBINED_REQS') }} STG_COMBINED_REQS
+            LEFT JOIN {{ ref('POC_SILVER', 'STG_FINAL_CRED') }} STG_FINAL_CRED 
+                ON STG_FINAL_CRED.CLOSE_REPORT = STG_COMBINED_REQS.CR_ID
+        name: STG_NODE
+        noLinkRefs: []
+  name: STG_COMBINED_REQS_2
+  overrideSQL: false
+  schema: ""
+  sqlType: Stage
+  type: sql
+  version: 1
+type: Node

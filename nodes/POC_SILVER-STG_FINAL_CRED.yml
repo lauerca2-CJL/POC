@@ -1,0 +1,129 @@
+fileVersion: 1
+id: d0536d45-361a-4dc4-a8ac-8f06692e02e3
+name: STG_FINAL_CRED
+operation:
+  config:
+    insertStrategy: INSERT
+    postSQL: ""
+    preSQL: ""
+    testsEnabled: true
+    truncateBefore: true
+  database: ""
+  deployEnabled: true
+  description: Deduplicated credentialing requests - one per candidate and closing report
+  isMultisource: false
+  locationName: POC_SILVER
+  materializationType: table
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 019b0523-b1ba-74ab-aa2b-8b4e9c8b428d
+          stepCounter: d0536d45-361a-4dc4-a8ac-8f06692e02e3
+        config: {}
+        dataType: VARCHAR
+        description: ""
+        name: NAME
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 019b0523-a366-776b-b8a3-43c3684253a6
+                stepCounter: 6be15ca0-3526-4b44-9762-e57787fe0c0b
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 019b0523-b1ba-74ab-aa2b-8eb39d0894a3
+          stepCounter: d0536d45-361a-4dc4-a8ac-8f06692e02e3
+        config: {}
+        dataType: VARCHAR
+        description: ""
+        name: CLOSE_REPORT
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 019b0523-a366-776b-b8a3-4450d22eb178
+                stepCounter: 6be15ca0-3526-4b44-9762-e57787fe0c0b
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 019b0523-b1ba-74ab-aa2b-92181c3e23b0
+          stepCounter: d0536d45-361a-4dc4-a8ac-8f06692e02e3
+        config: {}
+        dataType: VARCHAR
+        description: ""
+        name: STATUS__C
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 019b0523-a366-776b-b8a3-4948abf11c4e
+                stepCounter: 6be15ca0-3526-4b44-9762-e57787fe0c0b
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 019b0523-b1ba-74ab-aa2b-975faa42ed21
+          stepCounter: d0536d45-361a-4dc4-a8ac-8f06692e02e3
+        config: {}
+        dataType: VARCHAR
+        description: ""
+        name: CANDIDATE__C
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 019b0523-a366-776b-b8a3-4dde7e8443f6
+                stepCounter: 6be15ca0-3526-4b44-9762-e57787fe0c0b
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 019b0523-b1ba-74ab-aa2b-99bebbaad1dc
+          stepCounter: d0536d45-361a-4dc4-a8ac-8f06692e02e3
+        config: {}
+        dataType: VARCHAR
+        description: ""
+        name: CRED_STATUS
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 019b0523-a366-776b-b8a3-50677259fe27
+                stepCounter: 6be15ca0-3526-4b44-9762-e57787fe0c0b
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 019b0523-b1ba-74ab-aa2b-9f316666ff43
+          stepCounter: d0536d45-361a-4dc4-a8ac-8f06692e02e3
+        config: {}
+        dataType: TIMESTAMP
+        description: ""
+        name: CREATED_DATE__C
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 019b0523-a366-776b-b8a3-569c4e775fd6
+                stepCounter: 6be15ca0-3526-4b44-9762-e57787fe0c0b
+            transform: ""
+    cteString: ""
+    description: ""
+    destinationName: ""
+    enabledColumnTestIDs: []
+    materializationOption: ""
+    sourceMapping:
+      - aliases:
+          STG_CRED_CTE: 6be15ca0-3526-4b44-9762-e57787fe0c0b
+        customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: POC_SILVER
+            nodeName: STG_CRED_CTE
+        join:
+          joinCondition: |-
+            FROM {{ ref('POC_SILVER', 'STG_CRED_CTE') }} STG_CRED_CTE
+            WHERE STG_CRED_CTE.ROW_NUMBER = 1
+        name: STG_NODE
+        noLinkRefs: []
+  name: STG_FINAL_CRED
+  overrideSQL: false
+  schema: ""
+  sqlType: Stage
+  type: sql
+  version: 1
+type: Node

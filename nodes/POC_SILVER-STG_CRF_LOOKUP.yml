@@ -1,0 +1,134 @@
+fileVersion: 1
+id: 0fbe875f-fd2d-44cf-9ffa-a65915ae9ee3
+name: STG_CRF_LOOKUP
+operation:
+  config:
+    insertStrategy: INSERT
+    postSQL: ""
+    preSQL: ""
+    testsEnabled: true
+    truncateBefore: true
+  database: ""
+  deployEnabled: true
+  description: Closing Report Facility lookup with billing state codes
+  isMultisource: false
+  locationName: POC_SILVER
+  materializationType: table
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 019b0522-c376-70ee-b792-e82aef7141ce
+          stepCounter: 0fbe875f-fd2d-44cf-9ffa-a65915ae9ee3
+        config: {}
+        dataType: VARCHAR
+        description: ""
+        name: ID
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 99ac103c-d325-4b3a-a9e4-25a611145378
+                stepCounter: f68abd68-2344-42b5-971c-aec2be64595f
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 019b0522-c376-70ee-b792-efad1034feab
+          stepCounter: 0fbe875f-fd2d-44cf-9ffa-a65915ae9ee3
+        config: {}
+        dataType: VARCHAR
+        description: ""
+        name: NAME
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: eaa6cbbc-a999-402e-a4d1-168941b03b6d
+                stepCounter: f68abd68-2344-42b5-971c-aec2be64595f
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 019b0522-c376-70ee-b792-f39fd9e6e693
+          stepCounter: 0fbe875f-fd2d-44cf-9ffa-a65915ae9ee3
+        config: {}
+        dataType: VARCHAR
+        description: ""
+        name: CLOSING_REPORT__C
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: e6a6c2c8-0e5a-43e3-8bdf-accc3e122888
+                stepCounter: f68abd68-2344-42b5-971c-aec2be64595f
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 019b0522-c376-70ee-b792-f6e8ed4c810f
+          stepCounter: 0fbe875f-fd2d-44cf-9ffa-a65915ae9ee3
+        config: {}
+        dataType: VARCHAR
+        description: ""
+        name: FACILITY__C
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 8a5ba88a-6156-443b-aace-fbfaf2856b15
+                stepCounter: f68abd68-2344-42b5-971c-aec2be64595f
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 019b0522-c376-70ee-b792-fa61906733f5
+          stepCounter: 0fbe875f-fd2d-44cf-9ffa-a65915ae9ee3
+        config: {}
+        dataType: VARCHAR
+        description: ""
+        name: CRF_STATE_CODE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 46819523-b780-477f-9de1-4676d2da571f
+                stepCounter: 7358885a-7e2a-4670-8b97-ca43fc38d953
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 019b0522-c376-70ee-b792-fd859c9d2384
+          stepCounter: 0fbe875f-fd2d-44cf-9ffa-a65915ae9ee3
+        config: {}
+        dataType: BOOLEAN
+        description: ""
+        name: _FIVETRAN_DELETED
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: c166c63b-a6bf-4de2-92a6-492ba32ccca3
+                stepCounter: f68abd68-2344-42b5-971c-aec2be64595f
+            transform: ""
+    cteString: ""
+    description: ""
+    destinationName: ""
+    enabledColumnTestIDs: []
+    materializationOption: ""
+    sourceMapping:
+      - aliases:
+          ACCOUNT: 7358885a-7e2a-4670-8b97-ca43fc38d953
+          CLOSING_REPORT_FACILITY__C: f68abd68-2344-42b5-971c-aec2be64595f
+        customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: POC_BRONZE
+            nodeName: ACCOUNT
+          - locationName: POC_BRONZE
+            nodeName: CLOSING_REPORT_FACILITY__C
+        join:
+          joinCondition: |-
+            FROM {{ ref('POC_BRONZE', 'CLOSING_REPORT_FACILITY__C') }} CLOSING_REPORT_FACILITY__C
+            LEFT JOIN {{ ref('POC_BRONZE', 'ACCOUNT') }} ACCOUNT
+                ON ACCOUNT."Id" = CLOSING_REPORT_FACILITY__C."Facility__c"
+            WHERE CLOSING_REPORT_FACILITY__C."_fivetran_deleted" = FALSE
+        name: STG_CRF_LOOKUP
+        noLinkRefs: []
+  name: STG_CRF_LOOKUP
+  overrideSQL: false
+  schema: ""
+  sqlType: Stage
+  type: sql
+  version: 1
+type: Node

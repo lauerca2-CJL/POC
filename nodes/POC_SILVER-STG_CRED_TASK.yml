@@ -1,0 +1,74 @@
+fileVersion: 1
+id: 1618bb93-13c8-4f8c-a587-2ad92eb90d21
+name: STG_CRED_TASK
+operation:
+  config:
+    insertStrategy: INSERT
+    postSQL: ""
+    preSQL: ""
+    testsEnabled: true
+    truncateBefore: true
+  database: ""
+  deployEnabled: true
+  description: Count of incomplete credentialing tasks by whatId
+  isMultisource: false
+  locationName: POC_SILVER
+  materializationType: table
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 019b0523-e5dc-71aa-a1ac-325d769b556b
+          stepCounter: 1618bb93-13c8-4f8c-a587-2ad92eb90d21
+        config: {}
+        dataType: VARCHAR
+        description: ""
+        name: WHATID
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: a4f635c2-084d-48eb-8970-aa86e300b7fd
+                stepCounter: 2208d3f0-e4e2-4205-b814-8d95a6ce9070
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 019b0523-e5dc-71aa-a1ac-37a5a4d07a3b
+          stepCounter: 1618bb93-13c8-4f8c-a587-2ad92eb90d21
+        config: {}
+        dataType: NUMBER
+        description: ""
+        name: TASK_COUNT
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: e4d12a46-f79c-4166-8e25-fefc666d3520
+                stepCounter: 2208d3f0-e4e2-4205-b814-8d95a6ce9070
+            transform: COUNT(CRED_FACT_TASKS.ID)
+    cteString: ""
+    description: ""
+    destinationName: ""
+    enabledColumnTestIDs: []
+    materializationOption: ""
+    sourceMapping:
+      - aliases:
+          CRED_FACT_TASKS: 2208d3f0-e4e2-4205-b814-8d95a6ce9070
+        customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: POC_BRONZE
+            nodeName: CRED_FACT_TASKS
+        join:
+          joinCondition: |-
+            FROM {{ ref('POC_BRONZE', 'CRED_FACT_TASKS') }} CRED_FACT_TASKS
+            WHERE CRED_FACT_TASKS.TASK_STATUS NOT IN ('Completed', 'Not Applicable')
+            GROUP BY CRED_FACT_TASKS.WHATID
+        name: STG_NODE
+        noLinkRefs: []
+  name: STG_CRED_TASK
+  overrideSQL: false
+  schema: ""
+  sqlType: Stage
+  type: sql
+  version: 1
+type: Node

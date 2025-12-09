@@ -1,0 +1,120 @@
+fileVersion: 1
+id: 144202e7-9193-44d0-96e8-f1efb5b0351d
+name: STG_ALL_STATES_LOOKUP
+operation:
+  config:
+    insertStrategy: INSERT
+    postSQL: ""
+    preSQL: ""
+    testsEnabled: true
+    truncateBefore: true
+  database: ""
+  deployEnabled: true
+  description: Lookup table for all possible CRF states with facility billing state codes
+  isMultisource: false
+  locationName: POC_SILVER
+  materializationType: table
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 019b0522-b26a-772b-95a7-e1b48f0076c4
+          stepCounter: 144202e7-9193-44d0-96e8-f1efb5b0351d
+        config: {}
+        dataType: VARCHAR
+        description: ""
+        name: CR_ID
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: e6a6c2c8-0e5a-43e3-8bdf-accc3e122888
+                stepCounter: f68abd68-2344-42b5-971c-aec2be64595f
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 019b0522-b26a-772b-95a7-e7474eb68a60
+          stepCounter: 144202e7-9193-44d0-96e8-f1efb5b0351d
+        config: {}
+        dataType: VARCHAR
+        description: ""
+        name: CRF_ID
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 99ac103c-d325-4b3a-a9e4-25a611145378
+                stepCounter: f68abd68-2344-42b5-971c-aec2be64595f
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 019b0522-b26a-772b-95a7-e8623d491759
+          stepCounter: 144202e7-9193-44d0-96e8-f1efb5b0351d
+        config: {}
+        dataType: VARCHAR
+        description: ""
+        name: NAME
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: eaa6cbbc-a999-402e-a4d1-168941b03b6d
+                stepCounter: f68abd68-2344-42b5-971c-aec2be64595f
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 019b0522-b26a-772b-95a7-ede8516927d2
+          stepCounter: 144202e7-9193-44d0-96e8-f1efb5b0351d
+        config: {}
+        dataType: VARCHAR
+        description: ""
+        name: CRF_STATE_CODE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 46819523-b780-477f-9de1-4676d2da571f
+                stepCounter: 7358885a-7e2a-4670-8b97-ca43fc38d953
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 019b0522-b26a-772b-95a7-f02f179367ac
+          stepCounter: 144202e7-9193-44d0-96e8-f1efb5b0351d
+        config: {}
+        dataType: BOOLEAN
+        description: ""
+        name: _FIVETRAN_DELETED
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: c166c63b-a6bf-4de2-92a6-492ba32ccca3
+                stepCounter: f68abd68-2344-42b5-971c-aec2be64595f
+            transform: ""
+    cteString: ""
+    description: ""
+    destinationName: ""
+    enabledColumnTestIDs: []
+    materializationOption: ""
+    sourceMapping:
+      - aliases:
+          ACCOUNT: 7358885a-7e2a-4670-8b97-ca43fc38d953
+          CLOSING_REPORT_FACILITY__C: f68abd68-2344-42b5-971c-aec2be64595f
+        customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: POC_BRONZE
+            nodeName: ACCOUNT
+          - locationName: POC_BRONZE
+            nodeName: CLOSING_REPORT_FACILITY__C
+        join:
+          joinCondition: |-
+            FROM {{ ref('POC_BRONZE', 'CLOSING_REPORT_FACILITY__C') }} CLOSING_REPORT_FACILITY__C
+            LEFT JOIN {{ ref('POC_BRONZE', 'ACCOUNT') }} ACCOUNT
+                ON ACCOUNT."Id" = CLOSING_REPORT_FACILITY__C."Facility__c"
+            WHERE CLOSING_REPORT_FACILITY__C."_fivetran_deleted" = FALSE
+        name: STG_ALL_STATES_LOOKUP
+        noLinkRefs: []
+  name: STG_ALL_STATES_LOOKUP
+  overrideSQL: false
+  schema: ""
+  sqlType: Stage
+  type: sql
+  version: 1
+type: Node

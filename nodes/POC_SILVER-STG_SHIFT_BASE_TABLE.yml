@@ -1,0 +1,278 @@
+fileVersion: 1
+id: de8326b4-38d1-4565-ba8c-229eeca9f587
+name: STG_SHIFT_BASE_TABLE
+operation:
+  config:
+    insertStrategy: INSERT
+    postSQL: ""
+    preSQL: ""
+    testsEnabled: true
+    truncateBefore: true
+  database: ""
+  deployEnabled: true
+  description: Base shift table establishing licensing needs based on state, shift dates, and provider type
+  isMultisource: false
+  locationName: POC_SILVER
+  materializationType: table
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 019b0523-1c95-72b5-96d0-2d9a1f0e0743
+          stepCounter: de8326b4-38d1-4565-ba8c-229eeca9f587
+        config: {}
+        dataType: DATE
+        description: ""
+        name: MIN_SHIFT_DATE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: c770cf8d-c49c-4f51-b7c3-8bbbdd54bc96
+                stepCounter: 4845829d-ab5c-4160-8476-e24d6b7aeb20
+            transform: MIN(CONVERT_TIMEZONE('US/Eastern', SIRENUM__SHIFT__C."sirenum__Scheduled_End_Time__c")::DATE)
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 019b0523-1c95-72b5-96d0-3181649b2f72
+          stepCounter: de8326b4-38d1-4565-ba8c-229eeca9f587
+        config: {}
+        dataType: DATE
+        description: ""
+        name: MAX_SHIFT_DATE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: c770cf8d-c49c-4f51-b7c3-8bbbdd54bc96
+                stepCounter: 4845829d-ab5c-4160-8476-e24d6b7aeb20
+            transform: MAX(CONVERT_TIMEZONE('US/Eastern', SIRENUM__SHIFT__C."sirenum__Scheduled_End_Time__c")::DATE)
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 019b0523-1c95-72b5-96d0-35aaf9633bb3
+          stepCounter: de8326b4-38d1-4565-ba8c-229eeca9f587
+        config: {}
+        dataType: VARCHAR
+        description: ""
+        name: STATE_ID
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 019b0522-b26a-772b-95a7-ede8516927d2
+                stepCounter: 144202e7-9193-44d0-96e8-f1efb5b0351d
+            transform: COALESCE(STG_ALL_STATES_LOOKUP.CRF_STATE_CODE, STATE_ABBRV_STATE.CODE, STG_CRF_LOOKUP.CRF_STATE_CODE, ACCOUNT_FAC."BillingState")
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 019b0523-1c95-72b5-96d0-39a6b99f752a
+          stepCounter: de8326b4-38d1-4565-ba8c-229eeca9f587
+        config: {}
+        dataType: VARCHAR
+        description: ""
+        name: CONTACT_ID
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: ae83bf28-2b9f-4be5-80fd-e5796114c6e6
+                stepCounter: 596be14e-b929-45d1-99ad-4820525337b7
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 019b0523-1c95-72b5-96d0-3d9f68632db2
+          stepCounter: de8326b4-38d1-4565-ba8c-229eeca9f587
+        config: {}
+        dataType: VARCHAR
+        description: ""
+        name: PRIMARY_STATE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: COALESCE(STATE_ABBRV_PL.CODE, CONTACT."OtherStateCode")
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 019b0523-1c95-72b5-96d0-42e12a67feca
+          stepCounter: de8326b4-38d1-4565-ba8c-229eeca9f587
+        config: {}
+        dataType: BOOLEAN
+        description: ""
+        name: TELEMEDICINE__C
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: adc05c5c-043c-4ddd-9dae-ad3ed23628a2
+                stepCounter: 596be14e-b929-45d1-99ad-4820525337b7
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 019b0523-1c95-72b5-96d0-45d5cb3c711c
+          stepCounter: de8326b4-38d1-4565-ba8c-229eeca9f587
+        config: {}
+        dataType: VARCHAR
+        description: ""
+        name: CANDIDATE_TYPE__C
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 8a711327-b091-48d1-8177-ef04b5976fd7
+                stepCounter: 3afa1185-d098-4ec3-8638-78f9ed2b23bb
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 019b0523-1c95-72b5-96d0-486ccf1abb79
+          stepCounter: de8326b4-38d1-4565-ba8c-229eeca9f587
+        config: {}
+        dataType: VARCHAR
+        description: ""
+        name: S5M__BH4SFCLOSINGREPORT__C
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 35813178-0082-482c-8d0d-51229e029811
+                stepCounter: 4845829d-ab5c-4160-8476-e24d6b7aeb20
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 019b0523-1c95-72b5-96d0-4c230b5b958d
+          stepCounter: de8326b4-38d1-4565-ba8c-229eeca9f587
+        config: {}
+        dataType: VARCHAR
+        description: ""
+        name: AQ_FK
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: ae83bf28-2b9f-4be5-80fd-e5796114c6e6
+                stepCounter: 596be14e-b929-45d1-99ad-4820525337b7
+            transform: STATE_ID || '_' || TR1__CLOSING_REPORT__C."TR1__Person_Placed__c"
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 019b0523-1c95-72b5-96d0-51f2a8dd0709
+          stepCounter: de8326b4-38d1-4565-ba8c-229eeca9f587
+        config: {}
+        dataType: VARCHAR
+        description: ""
+        name: TELE_FK
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: COALESCE(STATE_ABBRV_PL.CODE, PRIMARY_STATE) || '_' || TR1__CLOSING_REPORT__C."TR1__Person_Placed__c"
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 019b0523-1c95-72b5-96d0-54883a10ae8c
+          stepCounter: de8326b4-38d1-4565-ba8c-229eeca9f587
+        config: {}
+        dataType: BOOLEAN
+        description: ""
+        name: _BOOL_GOV
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: bcb635ac-4d8a-4efe-a352-99f5904a8020
+                stepCounter: 26ab3fcd-48f5-4d7f-98d6-5632f1ad62a9
+            transform: TR1__JOB__C."Practice__c" = 'GOV (Government)'
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 019b0523-1c95-72b5-96d0-58d8a05f3cab
+          stepCounter: de8326b4-38d1-4565-ba8c-229eeca9f587
+        config: {}
+        dataType: VARCHAR
+        description: ""
+        name: AQ_FK_GOV
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: bcb635ac-4d8a-4efe-a352-99f5904a8020
+                stepCounter: 26ab3fcd-48f5-4d7f-98d6-5632f1ad62a9
+            transform: CASE WHEN TR1__JOB__C."Practice__c" = 'GOV (Government)' THEN 'GOV_' || TR1__CLOSING_REPORT__C."TR1__Person_Placed__c" END
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 019b0523-1c95-72b5-96d0-5f99198efcf1
+          stepCounter: de8326b4-38d1-4565-ba8c-229eeca9f587
+        config: {}
+        dataType: VARCHAR
+        description: ""
+        name: AQ_FK_IMLC
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: "NULL"
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 019b0523-1c95-72b5-96d0-63b56b9cd1bd
+          stepCounter: de8326b4-38d1-4565-ba8c-229eeca9f587
+        config: {}
+        dataType: BOOLEAN
+        description: ""
+        name: CSR_NOT_REQUIRED__C
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 5a68edd2-19f5-4034-b443-392ac2b66fea
+                stepCounter: 596be14e-b929-45d1-99ad-4820525337b7
+            transform: ""
+    cteString: ""
+    description: ""
+    destinationName: ""
+    enabledColumnTestIDs: []
+    materializationOption: ""
+    sourceMapping:
+      - aliases:
+          CONTACT: 3afa1185-d098-4ec3-8638-78f9ed2b23bb
+          SIRENUM__SHIFT__C: 4845829d-ab5c-4160-8476-e24d6b7aeb20
+          STG_ALL_STATES_LOOKUP: 144202e7-9193-44d0-96e8-f1efb5b0351d
+          STG_CRF_LOOKUP: 0fbe875f-fd2d-44cf-9ffa-a65915ae9ee3
+          TR1__CLOSING_REPORT__C: 596be14e-b929-45d1-99ad-4820525337b7
+          TR1__JOB__C: 26ab3fcd-48f5-4d7f-98d6-5632f1ad62a9
+        customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: POC_BRONZE
+            nodeName: ACCOUNT
+          - locationName: POC_BRONZE
+            nodeName: CONTACT
+          - locationName: POC_BRONZE
+            nodeName: SIRENUM__SHIFT__C
+          - locationName: POC_BRONZE
+            nodeName: STATE_ABBRV
+          - locationName: POC_BRONZE
+            nodeName: TR1__CLOSING_REPORT__C
+          - locationName: POC_BRONZE
+            nodeName: TR1__JOB__C
+          - locationName: POC_SILVER
+            nodeName: STG_ALL_STATES_LOOKUP
+          - locationName: POC_SILVER
+            nodeName: STG_CRF_LOOKUP
+        join:
+          joinCondition: |-
+            FROM {{ ref('POC_BRONZE', 'SIRENUM__SHIFT__C') }} SIRENUM__SHIFT__C
+            LEFT JOIN {{ ref('POC_BRONZE', 'TR1__CLOSING_REPORT__C') }} TR1__CLOSING_REPORT__C 
+                ON TR1__CLOSING_REPORT__C."Id" = SIRENUM__SHIFT__C."s5m__BH4SFClosingReport__c"
+            LEFT JOIN {{ ref('POC_BRONZE', 'ACCOUNT') }} ACCOUNT_FAC 
+                ON TR1__CLOSING_REPORT__C."Facility_Name__c" = ACCOUNT_FAC."Id"
+            LEFT JOIN {{ ref('POC_BRONZE', 'TR1__JOB__C') }} TR1__JOB__C 
+                ON TR1__JOB__C."Id" = SIRENUM__SHIFT__C."s5m__BH4SFJob__c"
+            LEFT JOIN {{ ref('POC_BRONZE', 'CONTACT') }} CONTACT 
+                ON CONTACT."Id" = TR1__CLOSING_REPORT__C."TR1__Person_Placed__c"
+            LEFT JOIN {{ ref('POC_SILVER', 'STG_CRF_LOOKUP') }} STG_CRF_LOOKUP 
+                ON SIRENUM__SHIFT__C."Closing_Report_Facility__c" = STG_CRF_LOOKUP.ID
+            LEFT JOIN {{ ref('POC_BRONZE', 'STATE_ABBRV') }} STATE_ABBRV_PL 
+                ON STATE_ABBRV_PL.NAME = TR1__CLOSING_REPORT__C."Practicing_Location__c"
+            LEFT JOIN {{ ref('POC_BRONZE', 'STATE_ABBRV') }} STATE_ABBRV_STATE 
+                ON STATE_ABBRV_STATE.NAME = COALESCE(STG_CRF_LOOKUP.CRF_STATE_CODE, ACCOUNT_FAC."BillingState")
+            LEFT JOIN {{ ref('POC_SILVER', 'STG_ALL_STATES_LOOKUP') }} STG_ALL_STATES_LOOKUP
+                ON STG_ALL_STATES_LOOKUP.CR_ID = SIRENUM__SHIFT__C."s5m__BH4SFClosingReport__c"
+                AND SIRENUM__SHIFT__C."Location_Type__c" IN ('TBD Location', 'Multiple Locations')
+            WHERE 
+                SIRENUM__SHIFT__C."IsDeleted" = FALSE
+                AND SIRENUM__SHIFT__C."sirenum__Scheduled_Start_Time__c"::DATE > GETDATE()
+                AND SIRENUM__SHIFT__C."Status_Validated_Timestamp__c" IS NOT NULL
+                AND SIRENUM__SHIFT__C."Status_Cancelled_Timestamp__c" IS NULL
+                AND CONTACT."Candidate_Type__c" IN ('MD (Medical Doctor)','DO (Osteopathic Doctor)')
+                AND SIRENUM__SHIFT__C."Reason_for_Cancellation__c" IS NULL
+            GROUP BY ALL
+        name: STG_SHIFT_BASE_TABLE
+        noLinkRefs: []
+  name: STG_SHIFT_BASE_TABLE
+  overrideSQL: false
+  schema: ""
+  sqlType: Stage
+  type: sql
+  version: 1
+type: Node

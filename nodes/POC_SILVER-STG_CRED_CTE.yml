@@ -1,0 +1,141 @@
+fileVersion: 1
+id: 6be15ca0-3526-4b44-9762-e57787fe0c0b
+name: STG_CRED_CTE
+operation:
+  config:
+    insertStrategy: INSERT
+    postSQL: ""
+    preSQL: ""
+    testsEnabled: true
+    truncateBefore: true
+  database: ""
+  deployEnabled: true
+  description: Credentialing request records with row numbering for deduplication
+  isMultisource: false
+  locationName: POC_SILVER
+  materializationType: table
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 019b0523-a366-776b-b8a3-43c3684253a6
+          stepCounter: 6be15ca0-3526-4b44-9762-e57787fe0c0b
+        config: {}
+        dataType: VARCHAR
+        description: ""
+        name: NAME
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: d329d8ee-1785-40f7-bfb4-c63199f60695
+                stepCounter: 3b8f3cc4-713a-4596-96cb-b0a64f125bc6
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 019b0523-a366-776b-b8a3-4450d22eb178
+          stepCounter: 6be15ca0-3526-4b44-9762-e57787fe0c0b
+        config: {}
+        dataType: VARCHAR
+        description: ""
+        name: CLOSE_REPORT
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: bab657b5-e466-4331-8c6d-a2c1b8a5028e
+                stepCounter: 3b8f3cc4-713a-4596-96cb-b0a64f125bc6
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 019b0523-a366-776b-b8a3-4948abf11c4e
+          stepCounter: 6be15ca0-3526-4b44-9762-e57787fe0c0b
+        config: {}
+        dataType: VARCHAR
+        description: ""
+        name: STATUS__C
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: e42f6d01-3cee-42dd-83c4-cba96ca70e84
+                stepCounter: 3b8f3cc4-713a-4596-96cb-b0a64f125bc6
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 019b0523-a366-776b-b8a3-4dde7e8443f6
+          stepCounter: 6be15ca0-3526-4b44-9762-e57787fe0c0b
+        config: {}
+        dataType: VARCHAR
+        description: ""
+        name: CANDIDATE__C
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 5a968f90-11e0-47a0-a092-ae2e38bf29cf
+                stepCounter: 3b8f3cc4-713a-4596-96cb-b0a64f125bc6
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 019b0523-a366-776b-b8a3-50677259fe27
+          stepCounter: 6be15ca0-3526-4b44-9762-e57787fe0c0b
+        config: {}
+        dataType: VARCHAR
+        description: ""
+        name: CRED_STATUS
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: e42f6d01-3cee-42dd-83c4-cba96ca70e84
+                stepCounter: 3b8f3cc4-713a-4596-96cb-b0a64f125bc6
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 019b0523-a366-776b-b8a3-569c4e775fd6
+          stepCounter: 6be15ca0-3526-4b44-9762-e57787fe0c0b
+        config: {}
+        dataType: TIMESTAMP
+        description: ""
+        name: CREATED_DATE__C
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 9b24c229-8483-4616-a666-0b8d02be75de
+                stepCounter: 3b8f3cc4-713a-4596-96cb-b0a64f125bc6
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 019b0523-a366-776b-b8a3-5a019bfeb638
+          stepCounter: 6be15ca0-3526-4b44-9762-e57787fe0c0b
+        config: {}
+        dataType: NUMBER
+        description: ""
+        name: ROW_NUMBER
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ROW_NUMBER() OVER (PARTITION BY CREDENTIALING_REQUEST__C."Candidate__c", CREDENTIALING_REQUEST__C."Closing_Report__c" ORDER BY CREDENTIALING_REQUEST__C."Name" DESC)
+    cteString: ""
+    description: ""
+    destinationName: ""
+    enabledColumnTestIDs: []
+    materializationOption: ""
+    sourceMapping:
+      - aliases:
+          CREDENTIALING_REQUEST__C: 3b8f3cc4-713a-4596-96cb-b0a64f125bc6
+        customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: POC_BRONZE
+            nodeName: CREDENTIALING_REQUEST__C
+        join:
+          joinCondition: |-
+            FROM {{ ref('POC_BRONZE', 'CREDENTIALING_REQUEST__C') }} CREDENTIALING_REQUEST__C
+            WHERE CREDENTIALING_REQUEST__C."IsDeleted" = FALSE
+        name: STG_NODE
+        noLinkRefs: []
+  name: STG_CRED_CTE
+  overrideSQL: false
+  schema: ""
+  sqlType: Stage
+  type: sql
+  version: 1
+type: Node

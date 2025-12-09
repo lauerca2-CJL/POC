@@ -1,0 +1,252 @@
+fileVersion: 1
+id: e6c1df37-b3cf-4c03-9220-54421c2626d9
+name: STG_COMBINED_REQS
+operation:
+  config:
+    insertStrategy: INSERT
+    postSQL: ""
+    preSQL: ""
+    testsEnabled: true
+    truncateBefore: true
+  database: ""
+  deployEnabled: true
+  description: Combined license requirements for all physician and CSR scenarios
+  isMultisource: false
+  locationName: POC_SILVER
+  materializationType: table
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 019b0523-8fc5-7514-a409-8a237a77d3af
+          stepCounter: e6c1df37-b3cf-4c03-9220-54421c2626d9
+        config: {}
+        dataType: VARCHAR
+        description: ""
+        name: SCENARIO
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: CASE WHEN MDDO_STATE_LICENSE_REQUIREMENTS_PHYS.STATE IS NOT NULL AND STG_SHIFT_BASE_TABLE.TELEMEDICINE__C = FALSE THEN 'Physician' WHEN MDDO_STATE_LICENSE_REQUIREMENTS_PHYS.STATE IS NOT NULL AND STG_SHIFT_BASE_TABLE.TELEMEDICINE__C = TRUE THEN 'Tele Physician' WHEN CSR_STATE_REQUIREMENTS.STATE IS NOT NULL AND STG_SHIFT_BASE_TABLE.TELEMEDICINE__C = FALSE THEN 'CSR' WHEN CSR_STATE_REQUIREMENTS_TELE.STATE IS NOT NULL AND STG_SHIFT_BASE_TABLE.TELEMEDICINE__C = TRUE THEN 'CSR Tele' ELSE 'Temp or Locum' END
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 019b0523-8fc5-7514-a409-8e1185f94a31
+          stepCounter: e6c1df37-b3cf-4c03-9220-54421c2626d9
+        config: {}
+        dataType: VARCHAR
+        description: ""
+        name: AQ_REQ
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: CASE WHEN SCENARIO IN ('Physician', 'Tele Physician') THEN 'Full Physician License' WHEN SCENARIO IN ('CSR', 'CSR Tele') THEN 'CSR' ELSE 'Locum/Temp/Emerg' END
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 019b0523-8fc5-7514-a409-93fec500d814
+          stepCounter: e6c1df37-b3cf-4c03-9220-54421c2626d9
+        config: {}
+        dataType: NUMBER
+        description: ""
+        name: REQ_MET_CONDITION_PHYS
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: CASE WHEN SCENARIO IN ('Physician', 'Tele Physician') THEN 1 ELSE 0 END
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 019b0523-8fc5-7514-a409-94da1a2e0a32
+          stepCounter: e6c1df37-b3cf-4c03-9220-54421c2626d9
+        config: {}
+        dataType: NUMBER
+        description: ""
+        name: REQ_MET_CONDITION_CSR
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: CASE WHEN SCENARIO IN ('CSR', 'CSR Tele', 'Temp or Locum') THEN 1 ELSE 0 END
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 019b0523-8fc5-7514-a409-993b8eb324e9
+          stepCounter: e6c1df37-b3cf-4c03-9220-54421c2626d9
+        config: {}
+        dataType: VARCHAR
+        description: ""
+        name: AQ_FK
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 019b0523-1c95-72b5-96d0-51f2a8dd0709
+                stepCounter: de8326b4-38d1-4565-ba8c-229eeca9f587
+            transform: CASE WHEN SCENARIO IN ('Tele Physician', 'CSR Tele') THEN STG_SHIFT_BASE_TABLE.TELE_FK ELSE STG_SHIFT_BASE_TABLE.AQ_FK END
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 019b0523-8fc5-7514-a409-9e5ed7ebe5fb
+          stepCounter: e6c1df37-b3cf-4c03-9220-54421c2626d9
+        config: {}
+        dataType: VARCHAR
+        description: ""
+        name: AQ_FK_GOV
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 019b0523-1c95-72b5-96d0-58d8a05f3cab
+                stepCounter: de8326b4-38d1-4565-ba8c-229eeca9f587
+            transform: CASE WHEN SCENARIO IN ('Tele Physician', 'CSR Tele') THEN NULL ELSE STG_SHIFT_BASE_TABLE.AQ_FK_GOV END
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 019b0523-8fc5-7514-a409-a18926bf4d0d
+          stepCounter: e6c1df37-b3cf-4c03-9220-54421c2626d9
+        config: {}
+        dataType: VARCHAR
+        description: ""
+        name: AQ_FK_IMLC
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 019b0523-1c95-72b5-96d0-5f99198efcf1
+                stepCounter: de8326b4-38d1-4565-ba8c-229eeca9f587
+            transform: CASE WHEN SCENARIO IN ('CSR', 'CSR Tele') THEN '' ELSE STG_SHIFT_BASE_TABLE.AQ_FK_IMLC END
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 019b0523-8fc5-7514-a409-a433a937743b
+          stepCounter: e6c1df37-b3cf-4c03-9220-54421c2626d9
+        config: {}
+        dataType: VARCHAR
+        description: ""
+        name: STATE_ID
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 019b0523-1c95-72b5-96d0-3d9f68632db2
+                stepCounter: de8326b4-38d1-4565-ba8c-229eeca9f587
+            transform: CASE WHEN SCENARIO IN ('Tele Physician', 'CSR Tele') THEN STG_SHIFT_BASE_TABLE.PRIMARY_STATE ELSE STG_SHIFT_BASE_TABLE.STATE_ID END
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 019b0523-8fc5-7514-a409-ab79dced2ec0
+          stepCounter: e6c1df37-b3cf-4c03-9220-54421c2626d9
+        config: {}
+        dataType: BOOLEAN
+        description: ""
+        name: TELEMEDICINE__C
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 019b0523-1c95-72b5-96d0-42e12a67feca
+                stepCounter: de8326b4-38d1-4565-ba8c-229eeca9f587
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 019b0523-8fc5-7514-a409-acc5fa68ccaf
+          stepCounter: e6c1df37-b3cf-4c03-9220-54421c2626d9
+        config: {}
+        dataType: BOOLEAN
+        description: ""
+        name: _BOOL_GOV
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 019b0523-1c95-72b5-96d0-54883a10ae8c
+                stepCounter: de8326b4-38d1-4565-ba8c-229eeca9f587
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 019b0523-8fc5-7514-a409-b17920244870
+          stepCounter: e6c1df37-b3cf-4c03-9220-54421c2626d9
+        config: {}
+        dataType: VARCHAR
+        description: ""
+        name: CONTACT_ID
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 019b0523-1c95-72b5-96d0-39a6b99f752a
+                stepCounter: de8326b4-38d1-4565-ba8c-229eeca9f587
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 019b0523-8fc5-7514-a409-b4bf59f567d9
+          stepCounter: e6c1df37-b3cf-4c03-9220-54421c2626d9
+        config: {}
+        dataType: VARCHAR
+        description: ""
+        name: CANDIDATE_TYPE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 019b0523-1c95-72b5-96d0-45d5cb3c711c
+                stepCounter: de8326b4-38d1-4565-ba8c-229eeca9f587
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 019b0523-8fc5-7514-a409-b93c7fe53a14
+          stepCounter: e6c1df37-b3cf-4c03-9220-54421c2626d9
+        config: {}
+        dataType: VARCHAR
+        description: ""
+        name: CR_ID
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 019b0523-1c95-72b5-96d0-486ccf1abb79
+                stepCounter: de8326b4-38d1-4565-ba8c-229eeca9f587
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 019b0523-8fc5-7514-a409-be1e532d82f1
+          stepCounter: e6c1df37-b3cf-4c03-9220-54421c2626d9
+        config: {}
+        dataType: DATE
+        description: ""
+        name: MAX_SHIFT_DATE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 019b0523-1c95-72b5-96d0-3181649b2f72
+                stepCounter: de8326b4-38d1-4565-ba8c-229eeca9f587
+            transform: ""
+    cteString: ""
+    description: ""
+    destinationName: ""
+    enabledColumnTestIDs: []
+    materializationOption: ""
+    sourceMapping:
+      - aliases:
+          CSR_STATE_REQUIREMENTS: d675f6b4-19bc-4804-ae55-3c6190f06a1c
+          CSR_STATE_REQUIREMENTS_TELE: d675f6b4-19bc-4804-ae55-3c6190f06a1c
+          STG_SHIFT_BASE_TABLE: de8326b4-38d1-4565-ba8c-229eeca9f587
+        customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: POC_BRONZE
+            nodeName: CSR_STATE_REQUIREMENTS
+          - locationName: POC_BRONZE
+            nodeName: MDDO_STATE_LICENSE_REQUIREMENTS
+          - locationName: POC_SILVER
+            nodeName: STG_SHIFT_BASE_TABLE
+        join:
+          joinCondition: |-
+            FROM {{ ref('POC_SILVER', 'STG_SHIFT_BASE_TABLE') }} STG_SHIFT_BASE_TABLE
+            LEFT JOIN {{ ref('POC_BRONZE', 'MDDO_STATE_LICENSE_REQUIREMENTS') }} MDDO_STATE_LICENSE_REQUIREMENTS_PHYS
+                ON MDDO_STATE_LICENSE_REQUIREMENTS_PHYS.STATE = STG_SHIFT_BASE_TABLE.STATE_ID
+                AND MDDO_STATE_LICENSE_REQUIREMENTS_PHYS.FULL_PHYSICIAN = TRUE
+            LEFT JOIN {{ ref('POC_BRONZE', 'CSR_STATE_REQUIREMENTS') }} CSR_STATE_REQUIREMENTS
+                ON CSR_STATE_REQUIREMENTS.STATE = STG_SHIFT_BASE_TABLE.STATE_ID
+                AND CSR_STATE_REQUIREMENTS.CSR_REQUIRED = TRUE
+                AND STG_SHIFT_BASE_TABLE._BOOL_GOV = FALSE
+                AND STG_SHIFT_BASE_TABLE.CSR_NOT_REQUIRED__C = FALSE
+            LEFT JOIN {{ ref('POC_BRONZE', 'CSR_STATE_REQUIREMENTS') }} CSR_STATE_REQUIREMENTS_TELE
+                ON CSR_STATE_REQUIREMENTS_TELE.STATE = STG_SHIFT_BASE_TABLE.PRIMARY_STATE
+                AND CSR_STATE_REQUIREMENTS_TELE.CSR_REQUIRED = TRUE
+                AND STG_SHIFT_BASE_TABLE._BOOL_GOV = FALSE
+                AND STG_SHIFT_BASE_TABLE.CSR_NOT_REQUIRED__C = FALSE
+                AND STG_SHIFT_BASE_TABLE.TELEMEDICINE__C = TRUE
+        name: STG_NODE
+        noLinkRefs: []
+  name: STG_COMBINED_REQS
+  overrideSQL: false
+  schema: ""
+  sqlType: Stage
+  type: sql
+  version: 1
+type: Node

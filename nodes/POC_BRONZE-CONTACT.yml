@@ -1,0 +1,73 @@
+fileVersion: 1
+id: 3afa1185-d098-4ec3-8638-78f9ed2b23bb
+name: CONTACT
+operation:
+  database: ""
+  deployEnabled: true
+  description: ""
+  locationName: POC_BRONZE
+  metadata:
+    columns:
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: c8cb3a0b-2e46-4f7d-8c4a-697d9bf2836f
+          stepCounter: 3afa1185-d098-4ec3-8638-78f9ed2b23bb
+        config: {}
+        dataType: VARCHAR(16777216)
+        defaultValue: ""
+        description: ""
+        name: ID
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 8a711327-b091-48d1-8177-ef04b5976fd7
+          stepCounter: 3afa1185-d098-4ec3-8638-78f9ed2b23bb
+        config: {}
+        dataType: VARCHAR(16777216)
+        defaultValue: ""
+        description: ""
+        name: CANDIDATE_TYPE__C
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: d12af5cb-7d73-4d11-be81-127489acf3cb
+          stepCounter: 3afa1185-d098-4ec3-8638-78f9ed2b23bb
+        config: {}
+        dataType: VARCHAR(16777216)
+        defaultValue: ""
+        description: ""
+        name: OTHERSTATECODE
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+  name: CONTACT
+  schema: ""
+  sqlType: Source
+  type: sourceInput
+  version: 1
+type: Node

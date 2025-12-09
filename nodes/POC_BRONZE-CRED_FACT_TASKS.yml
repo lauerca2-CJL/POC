@@ -1,0 +1,73 @@
+fileVersion: 1
+id: 2208d3f0-e4e2-4205-b814-8d95a6ce9070
+name: CRED_FACT_TASKS
+operation:
+  database: ""
+  deployEnabled: true
+  description: ""
+  locationName: POC_BRONZE
+  metadata:
+    columns:
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: a4f635c2-084d-48eb-8970-aa86e300b7fd
+          stepCounter: 2208d3f0-e4e2-4205-b814-8d95a6ce9070
+        config: {}
+        dataType: VARCHAR(16777216)
+        defaultValue: ""
+        description: ""
+        name: WHATID
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: e4d12a46-f79c-4166-8e25-fefc666d3520
+          stepCounter: 2208d3f0-e4e2-4205-b814-8d95a6ce9070
+        config: {}
+        dataType: VARCHAR(16777216)
+        defaultValue: ""
+        description: ""
+        name: ID
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 06973e91-4115-4550-8910-abdd95c7bebd
+          stepCounter: 2208d3f0-e4e2-4205-b814-8d95a6ce9070
+        config: {}
+        dataType: VARCHAR(16777216)
+        defaultValue: ""
+        description: ""
+        name: TASK_STATUS
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+  name: CRED_FACT_TASKS
+  schema: ""
+  sqlType: Source
+  type: sourceInput
+  version: 1
+type: Node

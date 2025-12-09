@@ -1,0 +1,301 @@
+fileVersion: 1
+id: 5d30d8fe-c52f-4f3f-b88c-414a9ebfbf4a
+name: TR1__ASSOCIATED_QUALIFICATION__C
+operation:
+  database: ""
+  deployEnabled: true
+  description: ""
+  locationName: POC_BRONZE
+  metadata:
+    columns:
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 1268ee9d-5e6f-410a-b02d-d67753896533
+          stepCounter: 5d30d8fe-c52f-4f3f-b88c-414a9ebfbf4a
+        config: {}
+        dataType: VARCHAR(16777216)
+        defaultValue: ""
+        description: ""
+        name: ID
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: cbacc136-f0ab-4806-a534-7047a69d0a13
+          stepCounter: 5d30d8fe-c52f-4f3f-b88c-414a9ebfbf4a
+        config: {}
+        dataType: VARCHAR(16777216)
+        defaultValue: ""
+        description: ""
+        name: NAME
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 65fc67e1-6489-4991-8a44-27817a424121
+          stepCounter: 5d30d8fe-c52f-4f3f-b88c-414a9ebfbf4a
+        config: {}
+        dataType: VARCHAR(16777216)
+        defaultValue: ""
+        description: ""
+        name: LICENSES_IN__C
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 3f45fbb9-46bd-421e-bf57-7bf408c8dfdd
+          stepCounter: 5d30d8fe-c52f-4f3f-b88c-414a9ebfbf4a
+        config: {}
+        dataType: VARCHAR(16777216)
+        defaultValue: ""
+        description: ""
+        name: TYPE__C
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: cdf6010f-517f-4fa8-bf48-4ffc07ac4417
+          stepCounter: 5d30d8fe-c52f-4f3f-b88c-414a9ebfbf4a
+        config: {}
+        dataType: VARCHAR(16777216)
+        defaultValue: ""
+        description: ""
+        name: TR1__CONTACT__C
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 6f2c228c-4e5e-422f-9af7-2527cd0c3287
+          stepCounter: 5d30d8fe-c52f-4f3f-b88c-414a9ebfbf4a
+        config: {}
+        dataType: VARCHAR(16777216)
+        defaultValue: ""
+        description: ""
+        name: CLOSING_REPORT__C
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: cfb6eaae-b155-4848-b337-6a461dc76d16
+          stepCounter: 5d30d8fe-c52f-4f3f-b88c-414a9ebfbf4a
+        config: {}
+        dataType: VARCHAR(16777216)
+        defaultValue: ""
+        description: ""
+        name: LICENSE_REQUEST__C
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 4135e889-b3ae-4eb8-a737-06258dc8b8f2
+          stepCounter: 5d30d8fe-c52f-4f3f-b88c-414a9ebfbf4a
+        config: {}
+        dataType: VARCHAR(16777216)
+        defaultValue: ""
+        description: ""
+        name: TR1__EXPIRATION_DATE__C
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: da16b9d7-dffb-4d27-900c-a92fd7ac6edc
+          stepCounter: 5d30d8fe-c52f-4f3f-b88c-414a9ebfbf4a
+        config: {}
+        dataType: VARCHAR(16777216)
+        defaultValue: ""
+        description: ""
+        name: TR1__STATUS__C
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: d8064912-72d3-4c70-904e-80de1da31df9
+          stepCounter: 5d30d8fe-c52f-4f3f-b88c-414a9ebfbf4a
+        config: {}
+        dataType: VARCHAR(16777216)
+        defaultValue: ""
+        description: ""
+        name: APPROVAL_STATUS__C
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 86ae68ce-6bee-40dc-a742-83c0b95ab5f7
+          stepCounter: 5d30d8fe-c52f-4f3f-b88c-414a9ebfbf4a
+        config: {}
+        dataType: VARCHAR(16777216)
+        defaultValue: ""
+        description: ""
+        name: EXPIRING_LICENSE_UPDATE__C
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 8dfbca0c-3dfb-4ad8-b4d4-e6f4d9130a3c
+          stepCounter: 5d30d8fe-c52f-4f3f-b88c-414a9ebfbf4a
+        config: {}
+        dataType: VARCHAR(16777216)
+        defaultValue: ""
+        description: ""
+        name: TR1__ISSUE_DATE_ONLY__C
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 747a1a5b-73b5-4009-a1da-4ee61950d944
+          stepCounter: 5d30d8fe-c52f-4f3f-b88c-414a9ebfbf4a
+        config: {}
+        dataType: VARCHAR(16777216)
+        defaultValue: ""
+        description: ""
+        name: ISDELETED
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: ae65ca06-602b-4d32-82c2-1b038aa9ed1b
+          stepCounter: 5d30d8fe-c52f-4f3f-b88c-414a9ebfbf4a
+        config: {}
+        dataType: VARCHAR(16777216)
+        defaultValue: ""
+        description: ""
+        name: CREATEDDATE
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 25a99326-02e2-46de-9594-7b7e648b372d
+          stepCounter: 5d30d8fe-c52f-4f3f-b88c-414a9ebfbf4a
+        config: {}
+        dataType: VARCHAR(16777216)
+        defaultValue: ""
+        description: ""
+        name: RECORDTYPEID
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+  name: TR1__ASSOCIATED_QUALIFICATION__C
+  schema: ""
+  sqlType: Source
+  type: sourceInput
+  version: 1
+type: Node

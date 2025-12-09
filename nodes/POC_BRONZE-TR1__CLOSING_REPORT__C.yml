@@ -1,0 +1,149 @@
+fileVersion: 1
+id: 596be14e-b929-45d1-99ad-4820525337b7
+name: TR1__CLOSING_REPORT__C
+operation:
+  database: ""
+  deployEnabled: true
+  description: ""
+  locationName: POC_BRONZE
+  metadata:
+    columns:
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 6755a30b-2af7-407d-9753-712a27b455b6
+          stepCounter: 596be14e-b929-45d1-99ad-4820525337b7
+        config: {}
+        dataType: VARCHAR(16777216)
+        defaultValue: ""
+        description: ""
+        name: ID
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: ae83bf28-2b9f-4be5-80fd-e5796114c6e6
+          stepCounter: 596be14e-b929-45d1-99ad-4820525337b7
+        config: {}
+        dataType: VARCHAR(16777216)
+        defaultValue: ""
+        description: ""
+        name: TR1__PERSON_PLACED__C
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: e3120d87-134f-4bdc-b5dc-806ba1f73bcb
+          stepCounter: 596be14e-b929-45d1-99ad-4820525337b7
+        config: {}
+        dataType: VARCHAR(16777216)
+        defaultValue: ""
+        description: ""
+        name: FACILITY_NAME__C
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 9ad38cd8-5f43-44c7-8d36-137db5ab9abc
+          stepCounter: 596be14e-b929-45d1-99ad-4820525337b7
+        config: {}
+        dataType: VARCHAR(16777216)
+        defaultValue: ""
+        description: ""
+        name: TR1__ACCOUNT__C
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: adc05c5c-043c-4ddd-9dae-ad3ed23628a2
+          stepCounter: 596be14e-b929-45d1-99ad-4820525337b7
+        config: {}
+        dataType: VARCHAR(16777216)
+        defaultValue: ""
+        description: ""
+        name: TELEMEDICINE__C
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 5a68edd2-19f5-4034-b443-392ac2b66fea
+          stepCounter: 596be14e-b929-45d1-99ad-4820525337b7
+        config: {}
+        dataType: VARCHAR(16777216)
+        defaultValue: ""
+        description: ""
+        name: CSR_NOT_REQUIRED__C
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 5a803fac-67fd-44d3-81de-fe307f2ad432
+          stepCounter: 596be14e-b929-45d1-99ad-4820525337b7
+        config: {}
+        dataType: VARCHAR(16777216)
+        defaultValue: ""
+        description: ""
+        name: PRACTICING_LOCATION__C
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+  name: TR1__CLOSING_REPORT__C
+  schema: ""
+  sqlType: Source
+  type: sourceInput
+  version: 1
+type: Node

@@ -1,0 +1,54 @@
+fileVersion: 1
+id: 0e3c6f89-410a-4287-8717-1073446716e8
+name: STATE_ABBRV
+operation:
+  database: ""
+  deployEnabled: true
+  description: ""
+  locationName: POC_BRONZE
+  metadata:
+    columns:
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 467a3863-0d61-4831-bbe0-d4b665e900c0
+          stepCounter: 0e3c6f89-410a-4287-8717-1073446716e8
+        config: {}
+        dataType: VARCHAR(16777216)
+        defaultValue: ""
+        description: ""
+        name: NAME
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 4caa8f0d-dfa6-4a37-96ac-6e04c372775d
+          stepCounter: 0e3c6f89-410a-4287-8717-1073446716e8
+        config: {}
+        dataType: VARCHAR(16777216)
+        defaultValue: ""
+        description: ""
+        name: CODE
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+  name: STATE_ABBRV
+  schema: ""
+  sqlType: Source
+  type: sourceInput
+  version: 1
+type: Node

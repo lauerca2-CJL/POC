@@ -1,0 +1,54 @@
+fileVersion: 1
+id: 520482c1-b51b-4db4-80f7-f03b56ad8b23
+name: LICENSE_REQUEST__C
+operation:
+  database: ""
+  deployEnabled: true
+  description: ""
+  locationName: POC_BRONZE
+  metadata:
+    columns:
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: a0c98f8d-a84d-4919-bdef-2305b431da5e
+          stepCounter: 520482c1-b51b-4db4-80f7-f03b56ad8b23
+        config: {}
+        dataType: VARCHAR(16777216)
+        defaultValue: ""
+        description: ""
+        name: ID
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: e26e1dd9-33a1-471e-9f13-f3cc3b44f05e
+          stepCounter: 520482c1-b51b-4db4-80f7-f03b56ad8b23
+        config: {}
+        dataType: VARCHAR(16777216)
+        defaultValue: ""
+        description: ""
+        name: STATUS__C
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+  name: LICENSE_REQUEST__C
+  schema: ""
+  sqlType: Source
+  type: sourceInput
+  version: 1
+type: Node

@@ -1,0 +1,92 @@
+fileVersion: 1
+id: 7358885a-7e2a-4670-8b97-ca43fc38d953
+name: ACCOUNT
+operation:
+  database: ""
+  deployEnabled: true
+  description: ""
+  locationName: POC_BRONZE
+  metadata:
+    columns:
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 47cb29bf-33bb-472a-84d5-20b3e9495383
+          stepCounter: 7358885a-7e2a-4670-8b97-ca43fc38d953
+        config: {}
+        dataType: VARCHAR(16777216)
+        defaultValue: ""
+        description: ""
+        name: ID
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 46819523-b780-477f-9de1-4676d2da571f
+          stepCounter: 7358885a-7e2a-4670-8b97-ca43fc38d953
+        config: {}
+        dataType: VARCHAR(16777216)
+        defaultValue: ""
+        description: ""
+        name: BILLINGSTATECODE
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 53c3ab97-f4e7-4c7b-9628-901f17f8e945
+          stepCounter: 7358885a-7e2a-4670-8b97-ca43fc38d953
+        config: {}
+        dataType: VARCHAR(16777216)
+        defaultValue: ""
+        description: ""
+        name: BILLINGSTATE
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: db1662f5-d722-4e5c-a095-2d0edaa32b03
+          stepCounter: 7358885a-7e2a-4670-8b97-ca43fc38d953
+        config: {}
+        dataType: VARCHAR(16777216)
+        defaultValue: ""
+        description: ""
+        name: NAME
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+  name: ACCOUNT
+  schema: ""
+  sqlType: Source
+  type: sourceInput
+  version: 1
+type: Node

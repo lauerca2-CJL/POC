@@ -1,0 +1,54 @@
+fileVersion: 1
+id: 26ab3fcd-48f5-4d7f-98d6-5632f1ad62a9
+name: TR1__JOB__C
+operation:
+  database: ""
+  deployEnabled: true
+  description: ""
+  locationName: POC_BRONZE
+  metadata:
+    columns:
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: f44a1717-5d3c-47d4-aa03-eb53742d5dc7
+          stepCounter: 26ab3fcd-48f5-4d7f-98d6-5632f1ad62a9
+        config: {}
+        dataType: VARCHAR(16777216)
+        defaultValue: ""
+        description: ""
+        name: ID
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: bcb635ac-4d8a-4efe-a352-99f5904a8020
+          stepCounter: 26ab3fcd-48f5-4d7f-98d6-5632f1ad62a9
+        config: {}
+        dataType: VARCHAR(16777216)
+        defaultValue: ""
+        description: ""
+        name: PRACTICE__C
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+  name: TR1__JOB__C
+  schema: ""
+  sqlType: Source
+  type: sourceInput
+  version: 1
+type: Node

@@ -1,0 +1,225 @@
+fileVersion: 1
+id: 4845829d-ab5c-4160-8476-e24d6b7aeb20
+name: SIRENUM__SHIFT__C
+operation:
+  database: ""
+  deployEnabled: true
+  description: ""
+  locationName: POC_BRONZE
+  metadata:
+    columns:
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 0a782a04-37ce-4c7a-91e7-ddca986c1254
+          stepCounter: 4845829d-ab5c-4160-8476-e24d6b7aeb20
+        config: {}
+        dataType: VARCHAR(16777216)
+        defaultValue: ""
+        description: ""
+        name: ID
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 35813178-0082-482c-8d0d-51229e029811
+          stepCounter: 4845829d-ab5c-4160-8476-e24d6b7aeb20
+        config: {}
+        dataType: VARCHAR(16777216)
+        defaultValue: ""
+        description: ""
+        name: S5M__BH4SFCLOSINGREPORT__C
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: ee103b7f-16c9-4613-acbc-c1957a0071d5
+          stepCounter: 4845829d-ab5c-4160-8476-e24d6b7aeb20
+        config: {}
+        dataType: VARCHAR(16777216)
+        defaultValue: ""
+        description: ""
+        name: S5M__BH4SFJOB__C
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 67008c69-c3c5-4f6b-ace2-0cfcf8eb11d8
+          stepCounter: 4845829d-ab5c-4160-8476-e24d6b7aeb20
+        config: {}
+        dataType: VARCHAR(16777216)
+        defaultValue: ""
+        description: ""
+        name: CLOSING_REPORT_FACILITY__C
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 2a76838b-7ed1-4b9c-be43-df41cef2624a
+          stepCounter: 4845829d-ab5c-4160-8476-e24d6b7aeb20
+        config: {}
+        dataType: VARCHAR(16777216)
+        defaultValue: ""
+        description: ""
+        name: ISDELETED
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: eb0f8fda-622b-41f4-97bc-d070ebe33bb2
+          stepCounter: 4845829d-ab5c-4160-8476-e24d6b7aeb20
+        config: {}
+        dataType: VARCHAR(16777216)
+        defaultValue: ""
+        description: ""
+        name: STATUS_VALIDATED_TIMESTAMP__C
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 5a22e7c4-f520-4ae5-ab7e-785391c0fdd0
+          stepCounter: 4845829d-ab5c-4160-8476-e24d6b7aeb20
+        config: {}
+        dataType: VARCHAR(16777216)
+        defaultValue: ""
+        description: ""
+        name: STATUS_CANCELLED_TIMESTAMP__C
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 5d4e4d07-e249-4df2-9a45-56fed89e49f3
+          stepCounter: 4845829d-ab5c-4160-8476-e24d6b7aeb20
+        config: {}
+        dataType: VARCHAR(16777216)
+        defaultValue: ""
+        description: ""
+        name: SIRENUM__SCHEDULED_START_TIME__C
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: c770cf8d-c49c-4f51-b7c3-8bbbdd54bc96
+          stepCounter: 4845829d-ab5c-4160-8476-e24d6b7aeb20
+        config: {}
+        dataType: VARCHAR(16777216)
+        defaultValue: ""
+        description: ""
+        name: SIRENUM__SCHEDULED_END_TIME__C
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 46804016-f5ee-4970-94dd-0f149efd2a49
+          stepCounter: 4845829d-ab5c-4160-8476-e24d6b7aeb20
+        config: {}
+        dataType: VARCHAR(16777216)
+        defaultValue: ""
+        description: ""
+        name: LOCATION_TYPE__C
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: b67b4dec-613d-4561-a27a-c373d779aca8
+          stepCounter: 4845829d-ab5c-4160-8476-e24d6b7aeb20
+        config: {}
+        dataType: VARCHAR(16777216)
+        defaultValue: ""
+        description: ""
+        name: REASON_FOR_CANCELLATION__C
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+  name: SIRENUM__SHIFT__C
+  schema: ""
+  sqlType: Source
+  type: sourceInput
+  version: 1
+type: Node

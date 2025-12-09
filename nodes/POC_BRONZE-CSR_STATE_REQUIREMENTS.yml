@@ -1,0 +1,54 @@
+fileVersion: 1
+id: d675f6b4-19bc-4804-ae55-3c6190f06a1c
+name: CSR_STATE_REQUIREMENTS
+operation:
+  database: ""
+  deployEnabled: true
+  description: ""
+  locationName: POC_BRONZE
+  metadata:
+    columns:
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 27de7dd5-327f-470d-980a-e8906be2814f
+          stepCounter: d675f6b4-19bc-4804-ae55-3c6190f06a1c
+        config: {}
+        dataType: VARCHAR(16777216)
+        defaultValue: ""
+        description: ""
+        name: CSR_REQUIRED
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: e99f1280-8ede-48c8-a9a4-93d77a4dac80
+          stepCounter: d675f6b4-19bc-4804-ae55-3c6190f06a1c
+        config: {}
+        dataType: VARCHAR(16777216)
+        defaultValue: ""
+        description: ""
+        name: STATE
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+  name: CSR_STATE_REQUIREMENTS
+  schema: ""
+  sqlType: Source
+  type: sourceInput
+  version: 1
+type: Node

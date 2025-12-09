@@ -1,0 +1,111 @@
+fileVersion: 1
+id: f68abd68-2344-42b5-971c-aec2be64595f
+name: CLOSING_REPORT_FACILITY__C
+operation:
+  database: ""
+  deployEnabled: true
+  description: ""
+  locationName: POC_BRONZE
+  metadata:
+    columns:
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: e6a6c2c8-0e5a-43e3-8bdf-accc3e122888
+          stepCounter: f68abd68-2344-42b5-971c-aec2be64595f
+        config: {}
+        dataType: VARCHAR(16777216)
+        defaultValue: ""
+        description: ""
+        name: CLOSING_REPORT__C
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 99ac103c-d325-4b3a-a9e4-25a611145378
+          stepCounter: f68abd68-2344-42b5-971c-aec2be64595f
+        config: {}
+        dataType: VARCHAR(16777216)
+        defaultValue: ""
+        description: ""
+        name: ID
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: eaa6cbbc-a999-402e-a4d1-168941b03b6d
+          stepCounter: f68abd68-2344-42b5-971c-aec2be64595f
+        config: {}
+        dataType: VARCHAR(16777216)
+        defaultValue: ""
+        description: ""
+        name: NAME
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 8a5ba88a-6156-443b-aace-fbfaf2856b15
+          stepCounter: f68abd68-2344-42b5-971c-aec2be64595f
+        config: {}
+        dataType: VARCHAR(16777216)
+        defaultValue: ""
+        description: ""
+        name: FACILITY__C
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: c166c63b-a6bf-4de2-92a6-492ba32ccca3
+          stepCounter: f68abd68-2344-42b5-971c-aec2be64595f
+        config: {}
+        dataType: VARCHAR(16777216)
+        defaultValue: ""
+        description: ""
+        name: _FIVETRAN_DELETED
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+  name: CLOSING_REPORT_FACILITY__C
+  schema: ""
+  sqlType: Source
+  type: sourceInput
+  version: 1
+type: Node

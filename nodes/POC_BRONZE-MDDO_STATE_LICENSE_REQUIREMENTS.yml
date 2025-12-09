@@ -1,0 +1,92 @@
+fileVersion: 1
+id: 70e56fae-b72a-4a10-b790-6cfaf600633b
+name: MDDO_STATE_LICENSE_REQUIREMENTS
+operation:
+  database: ""
+  deployEnabled: true
+  description: ""
+  locationName: POC_BRONZE
+  metadata:
+    columns:
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: e87fd962-ceab-479a-b972-6d2f6b858291
+          stepCounter: 70e56fae-b72a-4a10-b790-6cfaf600633b
+        config: {}
+        dataType: VARCHAR(16777216)
+        defaultValue: ""
+        description: ""
+        name: STATE
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 8de16d77-d797-47ee-a221-927b9afe0826
+          stepCounter: 70e56fae-b72a-4a10-b790-6cfaf600633b
+        config: {}
+        dataType: VARCHAR(16777216)
+        defaultValue: ""
+        description: ""
+        name: FULL_PHYSICIAN
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 7c2e5d2c-212a-4aa8-9b9d-3e27cbe69fda
+          stepCounter: 70e56fae-b72a-4a10-b790-6cfaf600633b
+        config: {}
+        dataType: VARCHAR(16777216)
+        defaultValue: ""
+        description: ""
+        name: IMLC
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 9443f460-2c80-43a8-bb89-20f019cf9970
+          stepCounter: 70e56fae-b72a-4a10-b790-6cfaf600633b
+        config: {}
+        dataType: VARCHAR(16777216)
+        defaultValue: ""
+        description: ""
+        name: SPL
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+  name: MDDO_STATE_LICENSE_REQUIREMENTS
+  schema: ""
+  sqlType: Source
+  type: sourceInput
+  version: 1
+type: Node

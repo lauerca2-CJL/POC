@@ -1,0 +1,54 @@
+fileVersion: 1
+id: 797e9e54-bc2f-4333-a35d-60e1070f285b
+name: RECORDTYPE
+operation:
+  database: ""
+  deployEnabled: true
+  description: ""
+  locationName: POC_BRONZE
+  metadata:
+    columns:
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 5396740b-c5ef-48eb-adf0-b6ef55032e3f
+          stepCounter: 797e9e54-bc2f-4333-a35d-60e1070f285b
+        config: {}
+        dataType: VARCHAR(16777216)
+        defaultValue: ""
+        description: ""
+        name: ID
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 58f5d97b-5bd5-4373-89d9-c6b30bce917f
+          stepCounter: 797e9e54-bc2f-4333-a35d-60e1070f285b
+        config: {}
+        dataType: VARCHAR(16777216)
+        defaultValue: ""
+        description: ""
+        name: NAME
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+  name: RECORDTYPE
+  schema: ""
+  sqlType: Source
+  type: sourceInput
+  version: 1
+type: Node

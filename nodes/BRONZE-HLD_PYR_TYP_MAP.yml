@@ -1,0 +1,54 @@
+fileVersion: 1
+id: d77d1ad1-23c6-44f7-a3f9-c0dec1d6880d
+name: HLD_PYR_TYP_MAP
+operation:
+  database: ""
+  deployEnabled: true
+  description: ""
+  locationName: BRONZE
+  metadata:
+    columns:
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 44c165d0-0fdf-467c-83af-a7a454b4afcb
+          stepCounter: d77d1ad1-23c6-44f7-a3f9-c0dec1d6880d
+        config: {}
+        dataType: VARCHAR(16777216)
+        defaultValue: ""
+        description: ""
+        name: PAYERNAME
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 995b9663-b52b-4c49-a795-4c06609d2b72
+          stepCounter: d77d1ad1-23c6-44f7-a3f9-c0dec1d6880d
+        config: {}
+        dataType: VARCHAR(16777216)
+        defaultValue: ""
+        description: ""
+        name: PAYERCODE
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+  name: HLD_PYR_TYP_MAP
+  schema: ""
+  sqlType: Source
+  type: sourceInput
+  version: 1
+type: Node

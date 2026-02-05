@@ -1,0 +1,92 @@
+fileVersion: 1
+id: fd0608d8-9a66-4708-a4cc-25c9dfb94c9c
+name: CLNDR_DT_DMNSN
+operation:
+  database: ""
+  deployEnabled: true
+  description: ""
+  locationName: BRONZE
+  metadata:
+    columns:
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 8b183936-2859-4598-a8fd-d82e5af7d7ff
+          stepCounter: fd0608d8-9a66-4708-a4cc-25c9dfb94c9c
+        config: {}
+        dataType: NUMBER(38,0)
+        defaultValue: ""
+        description: ""
+        name: CLNDR_DT_DMNSN_ID
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 918abad3-2554-4cad-951b-ce5ab81754bf
+          stepCounter: fd0608d8-9a66-4708-a4cc-25c9dfb94c9c
+        config: {}
+        dataType: DATE
+        defaultValue: ""
+        description: ""
+        name: DAY_DT
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: a971b3f5-eb4d-478d-954b-71b7ab12d1fe
+          stepCounter: fd0608d8-9a66-4708-a4cc-25c9dfb94c9c
+        config: {}
+        dataType: NUMBER(38,0)
+        defaultValue: ""
+        description: ""
+        name: DOM_NUM
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 97084a98-93f8-47c1-9a40-d1a9c995433e
+          stepCounter: fd0608d8-9a66-4708-a4cc-25c9dfb94c9c
+        config: {}
+        dataType: VARCHAR(16777216)
+        defaultValue: ""
+        description: ""
+        name: YR_MO_CD
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+  name: CLNDR_DT_DMNSN
+  schema: ""
+  sqlType: Source
+  type: sourceInput
+  version: 1
+type: Node

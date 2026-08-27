@@ -1,0 +1,168 @@
+fileVersion: 1
+id: b7ef82c4-6e73-40bd-b37f-9599e3a81b26
+name: SRC_CENLAR_CCU_DAILYEXTRACTHISTORY_SFTP_APPEND
+operation:
+  database: ""
+  deployEnabled: true
+  description: ""
+  locationName: BRONZE
+  metadata:
+    columns:
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 57ab3073-31b0-4e53-811d-174438829c3b
+          stepCounter: b7ef82c4-6e73-40bd-b37f-9599e3a81b26
+        config: {}
+        dataType: VARCHAR(30)
+        defaultValue: ""
+        description: ""
+        name: LOAN_NUMBER
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: f7a94534-1b1f-4a54-b5be-7b6922704260
+          stepCounter: b7ef82c4-6e73-40bd-b37f-9599e3a81b26
+        config: {}
+        dataType: VARCHAR(200)
+        defaultValue: ""
+        description: ""
+        name: CUSTOMER_NAME
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 57ccc70d-080e-4944-bd0e-9e6a7dcd00cf
+          stepCounter: b7ef82c4-6e73-40bd-b37f-9599e3a81b26
+        config: {}
+        dataType: VARCHAR(50)
+        defaultValue: ""
+        description: ""
+        name: LOAN_STATUS
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 033582dc-b22b-43aa-a6a2-6f13eee20e23
+          stepCounter: b7ef82c4-6e73-40bd-b37f-9599e3a81b26
+        config: {}
+        dataType: NUMBER(18,2)
+        defaultValue: ""
+        description: ""
+        name: PRINCIPAL_BALANCE
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: d792e706-4407-4732-bb7e-90839abe7edb
+          stepCounter: b7ef82c4-6e73-40bd-b37f-9599e3a81b26
+        config: {}
+        dataType: NUMBER(8,5)
+        defaultValue: ""
+        description: ""
+        name: INTEREST_RATE
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: d85c7a30-6297-4bfe-aa9e-d82367958028
+          stepCounter: b7ef82c4-6e73-40bd-b37f-9599e3a81b26
+        config: {}
+        dataType: NUMBER(18,2)
+        defaultValue: ""
+        description: ""
+        name: PAYMENT_AMOUNT
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: e1363683-5649-4896-b926-56d4007db814
+          stepCounter: b7ef82c4-6e73-40bd-b37f-9599e3a81b26
+        config: {}
+        dataType: DATE
+        defaultValue: ""
+        description: ""
+        name: NEXT_PAYMENT_DATE
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: d033e6ff-6d7c-40d6-bddb-f3be67761257
+          stepCounter: b7ef82c4-6e73-40bd-b37f-9599e3a81b26
+        config: {}
+        dataType: DATE
+        defaultValue: ""
+        description: ""
+        name: EXTRACT_DATE
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+  name: SRC_CENLAR_CCU_DAILYEXTRACTHISTORY_SFTP_APPEND
+  schema: ""
+  sqlType: Source
+  type: sourceInput
+  version: 1
+type: Node

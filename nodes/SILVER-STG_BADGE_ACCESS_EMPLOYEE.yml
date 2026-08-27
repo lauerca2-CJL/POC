@@ -1,0 +1,259 @@
+fileVersion: 1
+id: 5474e3c7-f1ca-4dd9-8ee4-e8f99cd02551
+name: STG_BADGE_ACCESS_EMPLOYEE
+operation:
+  config:
+    insertStrategy: INSERT
+    postSQL: ""
+    preSQL: ""
+    testsEnabled: true
+    truncateBefore: true
+  database: ""
+  deployEnabled: true
+  description: Badge access events left-joined to employee attributes on a normalized full-name match key.
+  isMultisource: false
+  locationName: SILVER
+  materializationType: table
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 019ffc6d-62a3-712c-a9d9-e299580bbcc0
+          stepCounter: 5474e3c7-f1ca-4dd9-8ee4-e8f99cd02551
+        config: {}
+        dataType: DATE
+        description: ""
+        name: DATE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 019ffc6d-2606-713c-9f34-89469de90498
+                stepCounter: 1b3df555-0197-4bee-9548-a478a4d391e0
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 019ffc6d-62a3-712c-a9d9-e793572bfbf0
+          stepCounter: 5474e3c7-f1ca-4dd9-8ee4-e8f99cd02551
+        config: {}
+        dataType: TIME(9)
+        description: ""
+        name: TIME
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 019ffc6d-2606-713c-9f34-8d5d2f5264ae
+                stepCounter: 1b3df555-0197-4bee-9548-a478a4d391e0
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 019ffc6d-62a3-712c-a9d9-ea704837d1af
+          stepCounter: 5474e3c7-f1ca-4dd9-8ee4-e8f99cd02551
+        config: {}
+        dataType: VARCHAR(16777216)
+        description: ""
+        name: DOOR
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 019ffc6d-2606-713c-9f34-922db0332e79
+                stepCounter: 1b3df555-0197-4bee-9548-a478a4d391e0
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 019ffc6d-62a3-712c-a9d9-ecfc47b19194
+          stepCounter: 5474e3c7-f1ca-4dd9-8ee4-e8f99cd02551
+        config: {}
+        dataType: VARCHAR(16777216)
+        description: ""
+        name: BADGE_NUMBER
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 019ffc6d-2606-713c-9f34-9574ff960506
+                stepCounter: 1b3df555-0197-4bee-9548-a478a4d391e0
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 019ffc6d-62a3-712c-a9d9-f2180ef01503
+          stepCounter: 5474e3c7-f1ca-4dd9-8ee4-e8f99cd02551
+        config: {}
+        dataType: VARCHAR(16777216)
+        description: ""
+        name: LAST_NAME
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 019ffc6d-2606-713c-9f34-99a4690ed08b
+                stepCounter: 1b3df555-0197-4bee-9548-a478a4d391e0
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 019ffc6d-62a3-712c-a9d9-f6825b8b6a40
+          stepCounter: 5474e3c7-f1ca-4dd9-8ee4-e8f99cd02551
+        config: {}
+        dataType: VARCHAR(16777216)
+        description: ""
+        name: FIRST_NAME
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 019ffc6d-2606-713c-9f34-9c1b481146ef
+                stepCounter: 1b3df555-0197-4bee-9548-a478a4d391e0
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 019ffc6d-62a3-712c-a9d9-f8edab018ec6
+          stepCounter: 5474e3c7-f1ca-4dd9-8ee4-e8f99cd02551
+        config: {}
+        dataType: VARCHAR(16777216)
+        description: ""
+        name: FULL_NAME
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 019ffc6d-2606-713c-9f34-a39d99cb4182
+                stepCounter: 1b3df555-0197-4bee-9548-a478a4d391e0
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 019ffc6d-62a3-712c-a9d9-fe30b9b0a9cb
+          stepCounter: 5474e3c7-f1ca-4dd9-8ee4-e8f99cd02551
+        config: {}
+        dataType: VARCHAR(16777216)
+        description: ""
+        name: SOURCE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 019ffc6d-2606-713c-9f34-a475e5f4be51
+                stepCounter: 1b3df555-0197-4bee-9548-a478a4d391e0
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 019ffc6d-62a3-712c-a9da-006de38e1e64
+          stepCounter: 5474e3c7-f1ca-4dd9-8ee4-e8f99cd02551
+        config: {}
+        dataType: VARCHAR(16777216)
+        description: ""
+        name: UKG_FULL_NAME
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 019ffc6c-75e0-738b-b19d-1420224141fd
+                stepCounter: 8519bcf9-706a-4853-a38f-c27b9f0749b0
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 019ffc6d-62a3-712c-a9da-0704c05a7610
+          stepCounter: 5474e3c7-f1ca-4dd9-8ee4-e8f99cd02551
+        config: {}
+        dataType: VARCHAR(16777216)
+        description: ""
+        name: DEPARTMENT
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 019ffc6c-75e0-738b-b19d-05a42edce76b
+                stepCounter: 8519bcf9-706a-4853-a38f-c27b9f0749b0
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 019ffc6d-62a3-712c-a9da-0b3825d08aba
+          stepCounter: 5474e3c7-f1ca-4dd9-8ee4-e8f99cd02551
+        config: {}
+        dataType: VARCHAR(16777216)
+        description: ""
+        name: DATA_SOURCE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 019ffc6c-75e0-738b-b19d-0bbbfb7e0cb6
+                stepCounter: 8519bcf9-706a-4853-a38f-c27b9f0749b0
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 019ffc6d-62a3-712c-a9da-0cdebfd0e6e0
+          stepCounter: 5474e3c7-f1ca-4dd9-8ee4-e8f99cd02551
+        config: {}
+        dataType: VARCHAR(16777216)
+        description: ""
+        name: UKG_EMPLOYEE_NUMBER
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 019ffc6c-75e0-738b-b19d-18f0967423d8
+                stepCounter: 8519bcf9-706a-4853-a38f-c27b9f0749b0
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 019ffc6d-62a3-712c-a9da-1132c94ad768
+          stepCounter: 5474e3c7-f1ca-4dd9-8ee4-e8f99cd02551
+        config: {}
+        dataType: VARCHAR(16777216)
+        description: ""
+        name: IS_ACTIVE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 019ffc6c-75e0-738b-b19d-1ef47a94b105
+                stepCounter: 8519bcf9-706a-4853-a38f-c27b9f0749b0
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 019ffc6d-62a3-712c-a9da-16984793a252
+          stepCounter: 5474e3c7-f1ca-4dd9-8ee4-e8f99cd02551
+        config: {}
+        dataType: VARCHAR(16777216)
+        description: ""
+        name: MOBILITY_PROFILE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 019ffc6c-75e0-738b-b19d-11ef2ab012fd
+                stepCounter: 8519bcf9-706a-4853-a38f-c27b9f0749b0
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 019ffc6d-62a3-712c-a9da-19102686776d
+          stepCounter: 5474e3c7-f1ca-4dd9-8ee4-e8f99cd02551
+        config: {}
+        dataType: VARCHAR(16777216)
+        description: ""
+        name: EMAIL
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 019ffc6c-75e0-738b-b19d-0d68eeb6a853
+                stepCounter: 8519bcf9-706a-4853-a38f-c27b9f0749b0
+            transform: ""
+    cteString: ""
+    description: ""
+    destinationName: ""
+    enabledColumnTestIDs: []
+    materializationOption: ""
+    sourceMapping:
+      - aliases:
+          LEFT: 1b3df555-0197-4bee-9548-a478a4d391e0
+          STG_DIM_EMPLOYEE: 8519bcf9-706a-4853-a38f-c27b9f0749b0
+        customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: SILVER
+            nodeName: STG_BADGE_ACCESS_UNION
+          - locationName: SILVER
+            nodeName: STG_DIM_EMPLOYEE
+        join:
+          joinCondition: |-
+            FROM {{ ref('SILVER', 'STG_BADGE_ACCESS_UNION') }}
+            LEFT OUTER JOIN {{ ref('SILVER', 'STG_DIM_EMPLOYEE') }}
+                ON "STG_BADGE_ACCESS_UNION"."FULL_NAME_MATCH" = "STG_DIM_EMPLOYEE"."FULL_NAME_MATCH"
+        name: STG_BADGE_ACCESS_EMPLOYEE
+        noLinkRefs: []
+  name: STG_BADGE_ACCESS_EMPLOYEE
+  overrideSQL: false
+  schema: ""
+  sqlType: Stage
+  type: sql
+  version: 1
+type: Node

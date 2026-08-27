@@ -1,0 +1,187 @@
+fileVersion: 1
+id: c4a444ce-ac8b-4bf9-a24a-ed4708396efc
+name: DIM_EMPLOYEE
+operation:
+  database: ""
+  deployEnabled: true
+  description: ""
+  locationName: BRONZE
+  metadata:
+    columns:
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 11c00dbd-9e1c-406e-8850-3711566b3031
+          stepCounter: c4a444ce-ac8b-4bf9-a24a-ed4708396efc
+        config: {}
+        dataType: VARCHAR(16777216)
+        defaultValue: ""
+        description: ""
+        name: DEPARTMENT
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 9562a301-fa9c-4331-8915-6b5a8b850315
+          stepCounter: c4a444ce-ac8b-4bf9-a24a-ed4708396efc
+        config: {}
+        dataType: VARCHAR(16777216)
+        defaultValue: ""
+        description: ""
+        name: DATA_SOURCE
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: d4636d7a-46da-4beb-840c-f7dc37b52161
+          stepCounter: c4a444ce-ac8b-4bf9-a24a-ed4708396efc
+        config: {}
+        dataType: VARCHAR(16777216)
+        defaultValue: ""
+        description: ""
+        name: EMAIL
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 463b62a8-db8e-4871-8101-349faf13fd12
+          stepCounter: c4a444ce-ac8b-4bf9-a24a-ed4708396efc
+        config: {}
+        dataType: VARCHAR(16777216)
+        defaultValue: ""
+        description: ""
+        name: MOBILITY_PERSONA
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: b5332a19-9abe-4885-ad31-271c1a55aacb
+          stepCounter: c4a444ce-ac8b-4bf9-a24a-ed4708396efc
+        config: {}
+        dataType: VARCHAR(16777216)
+        defaultValue: ""
+        description: ""
+        name: FULL_NAME
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 382dfdc4-823c-459b-b570-dd44886ea0f6
+          stepCounter: c4a444ce-ac8b-4bf9-a24a-ed4708396efc
+        config: {}
+        dataType: VARCHAR(16777216)
+        defaultValue: ""
+        description: ""
+        name: UKG_EMPLOYEE_NUMBER
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: b39e7253-f30c-43cd-bf53-78f6605f54a3
+          stepCounter: c4a444ce-ac8b-4bf9-a24a-ed4708396efc
+        config: {}
+        dataType: VARCHAR(16777216)
+        defaultValue: ""
+        description: ""
+        name: IS_ACTIVE
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: b23bd33c-1085-488d-9b27-a0e21d5dd575
+          stepCounter: c4a444ce-ac8b-4bf9-a24a-ed4708396efc
+        config: {}
+        dataType: VARCHAR(16777216)
+        defaultValue: ""
+        description: ""
+        name: FULL_TIME_OR_PART_TIME
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 07311022-7e6a-4ace-b432-1065d68e85c0
+          stepCounter: c4a444ce-ac8b-4bf9-a24a-ed4708396efc
+        config: {}
+        dataType: VARCHAR(16777216)
+        defaultValue: ""
+        description: ""
+        name: LOCATION
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+  name: DIM_EMPLOYEE
+  schema: ""
+  sqlType: Source
+  type: sourceInput
+  version: 1
+type: Node

@@ -1,0 +1,168 @@
+fileVersion: 1
+id: ac4bf622-5a2a-4530-9c5d-0fefce38a4d0
+name: BR_VERKADABADGEACCESS
+operation:
+  database: ""
+  deployEnabled: true
+  description: ""
+  locationName: BRONZE
+  metadata:
+    columns:
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: e159c928-47a2-4fcd-90be-a785e3d0d17a
+          stepCounter: ac4bf622-5a2a-4530-9c5d-0fefce38a4d0
+        config: {}
+        dataType: TIMESTAMP_NTZ(9)
+        defaultValue: ""
+        description: ""
+        name: LOC_TIMESTAMP
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 10e98909-674c-4f37-becb-bf2ac3eb9713
+          stepCounter: ac4bf622-5a2a-4530-9c5d-0fefce38a4d0
+        config: {}
+        dataType: VARCHAR(16777216)
+        defaultValue: ""
+        description: ""
+        name: LOC_EVENT_INFO_USERNAME
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 6d2efb40-3614-44c8-b3ff-15359f922577
+          stepCounter: ac4bf622-5a2a-4530-9c5d-0fefce38a4d0
+        config: {}
+        dataType: VARCHAR(16777216)
+        defaultValue: ""
+        description: ""
+        name: BADGE_NUMBER
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 46481feb-d48f-436f-95c9-d919fd6b8c2c
+          stepCounter: ac4bf622-5a2a-4530-9c5d-0fefce38a4d0
+        config: {}
+        dataType: VARCHAR(16777216)
+        defaultValue: ""
+        description: ""
+        name: LOC_EVENT_INFO_USERINFO_FIRSTNAME
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: ba89bdc9-4af0-4414-bd76-6c4118144acc
+          stepCounter: ac4bf622-5a2a-4530-9c5d-0fefce38a4d0
+        config: {}
+        dataType: VARCHAR(16777216)
+        defaultValue: ""
+        description: ""
+        name: LOC_EVENT_INFO_USERINFO_LASTNAME
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: e681d0bb-af3a-4ad7-bdf1-8661ec64a35b
+          stepCounter: ac4bf622-5a2a-4530-9c5d-0fefce38a4d0
+        config: {}
+        dataType: VARCHAR(16777216)
+        defaultValue: ""
+        description: ""
+        name: LOC_EVENT_INFO_DOORINFO_NAME
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 7868e5c9-f52a-47f7-a6e7-7ba0d3bf69b8
+          stepCounter: ac4bf622-5a2a-4530-9c5d-0fefce38a4d0
+        config: {}
+        dataType: VARCHAR(16777216)
+        defaultValue: ""
+        description: ""
+        name: LOC_EVENT_INFO_BUILDINGNAME
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: a58c8dcc-7b53-4d81-938f-43ccf089e21a
+          stepCounter: ac4bf622-5a2a-4530-9c5d-0fefce38a4d0
+        config: {}
+        dataType: VARCHAR(16777216)
+        defaultValue: ""
+        description: ""
+        name: LOC_EVENT_INFO_SITENAME
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+  name: BR_VERKADABADGEACCESS
+  schema: ""
+  sqlType: Source
+  type: sourceInput
+  version: 1
+type: Node

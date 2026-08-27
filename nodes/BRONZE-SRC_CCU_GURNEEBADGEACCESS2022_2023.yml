@@ -1,0 +1,149 @@
+fileVersion: 1
+id: ebe65e70-7097-4da0-aabf-e2b48460c8c6
+name: SRC_CCU_GURNEEBADGEACCESS2022_2023
+operation:
+  database: ""
+  deployEnabled: true
+  description: ""
+  locationName: BRONZE
+  metadata:
+    columns:
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 9005b41f-3cee-4830-a918-64500b772bab
+          stepCounter: ebe65e70-7097-4da0-aabf-e2b48460c8c6
+        config: {}
+        dataType: DATE
+        defaultValue: ""
+        description: ""
+        name: Date
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: e733cfec-1668-470a-8165-a4bf313fe1cf
+          stepCounter: ebe65e70-7097-4da0-aabf-e2b48460c8c6
+        config: {}
+        dataType: TIME(9)
+        defaultValue: ""
+        description: ""
+        name: Time
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 57580f77-6b5e-4812-be00-1e31a50c755a
+          stepCounter: ebe65e70-7097-4da0-aabf-e2b48460c8c6
+        config: {}
+        dataType: VARCHAR(16777216)
+        defaultValue: ""
+        description: ""
+        name: Door
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 2cc3bc49-dbbb-43cd-9f69-de749d766f90
+          stepCounter: ebe65e70-7097-4da0-aabf-e2b48460c8c6
+        config: {}
+        dataType: VARCHAR(16777216)
+        defaultValue: ""
+        description: ""
+        name: Badge Number
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: dce0eea7-c0b5-4569-80ea-854e6480e601
+          stepCounter: ebe65e70-7097-4da0-aabf-e2b48460c8c6
+        config: {}
+        dataType: VARCHAR(16777216)
+        defaultValue: ""
+        description: ""
+        name: Last Name
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 22c855b7-ea47-48ca-81be-dd857aae0de6
+          stepCounter: ebe65e70-7097-4da0-aabf-e2b48460c8c6
+        config: {}
+        dataType: VARCHAR(16777216)
+        defaultValue: ""
+        description: ""
+        name: First Name
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 7a8a8e98-1720-4f9c-97f5-5bea4a383ed2
+          stepCounter: ebe65e70-7097-4da0-aabf-e2b48460c8c6
+        config: {}
+        dataType: VARCHAR(16777216)
+        defaultValue: ""
+        description: ""
+        name: Full Name
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+  name: SRC_CCU_GURNEEBADGEACCESS2022_2023
+  schema: ""
+  sqlType: Source
+  type: sourceInput
+  version: 1
+type: Node

@@ -1,0 +1,155 @@
+fileVersion: 1
+id: deafbde5-1fff-4bde-a302-73022332350d
+name: CENLAR_DAILY_EXTRACT_HISTORY
+operation:
+  config:
+    insertStrategy: INSERT
+    postSQL: ""
+    preSQL: ""
+    testsEnabled: true
+    truncateBefore: true
+  database: ""
+  deployEnabled: true
+  description: Published Cenlar CCU daily extract history (union of base and post-2025-08-27 extracts). Corresponds to the Domo "Test" REPLACE output dataset.
+  isMultisource: false
+  locationName: SILVER
+  materializationType: table
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 019ffc87-a380-7109-8d3e-7338e7de51bb
+          stepCounter: deafbde5-1fff-4bde-a302-73022332350d
+        config: {}
+        dataType: VARCHAR(30)
+        description: ""
+        name: LOAN_NUMBER
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 019ffc87-7401-732c-8de3-c95f00cc2f53
+                stepCounter: d6cf1648-202f-4e32-8b1d-5e17af2cf468
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 019ffc87-a380-7109-8d3e-74cb97435ff6
+          stepCounter: deafbde5-1fff-4bde-a302-73022332350d
+        config: {}
+        dataType: VARCHAR(200)
+        description: ""
+        name: CUSTOMER_NAME
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 019ffc87-7401-732c-8de3-cdf12d34204b
+                stepCounter: d6cf1648-202f-4e32-8b1d-5e17af2cf468
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 019ffc87-a380-7109-8d3e-78c32ec9755f
+          stepCounter: deafbde5-1fff-4bde-a302-73022332350d
+        config: {}
+        dataType: VARCHAR(50)
+        description: ""
+        name: LOAN_STATUS
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 019ffc87-7401-732c-8de3-d144f3d08ca0
+                stepCounter: d6cf1648-202f-4e32-8b1d-5e17af2cf468
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 019ffc87-a380-7109-8d3e-7f3fd7ed172a
+          stepCounter: deafbde5-1fff-4bde-a302-73022332350d
+        config: {}
+        dataType: NUMBER(18,2)
+        description: ""
+        name: PRINCIPAL_BALANCE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 019ffc87-7401-732c-8de3-d72905e2497b
+                stepCounter: d6cf1648-202f-4e32-8b1d-5e17af2cf468
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 019ffc87-a380-7109-8d3e-80f2419a78ee
+          stepCounter: deafbde5-1fff-4bde-a302-73022332350d
+        config: {}
+        dataType: NUMBER(8,5)
+        description: ""
+        name: INTEREST_RATE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 019ffc87-7401-732c-8de3-daeb46bf88ed
+                stepCounter: d6cf1648-202f-4e32-8b1d-5e17af2cf468
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 019ffc87-a380-7109-8d3e-85550d8e39fc
+          stepCounter: deafbde5-1fff-4bde-a302-73022332350d
+        config: {}
+        dataType: NUMBER(18,2)
+        description: ""
+        name: PAYMENT_AMOUNT
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 019ffc87-7401-732c-8de3-dd61bddccd51
+                stepCounter: d6cf1648-202f-4e32-8b1d-5e17af2cf468
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 019ffc87-a380-7109-8d3e-88c3838ed0e4
+          stepCounter: deafbde5-1fff-4bde-a302-73022332350d
+        config: {}
+        dataType: DATE
+        description: ""
+        name: NEXT_PAYMENT_DATE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 019ffc87-7401-732c-8de3-e0b05f66d935
+                stepCounter: d6cf1648-202f-4e32-8b1d-5e17af2cf468
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 019ffc87-a380-7109-8d3e-8c06a08f947c
+          stepCounter: deafbde5-1fff-4bde-a302-73022332350d
+        config: {}
+        dataType: DATE
+        description: ""
+        name: EXTRACT_DATE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 019ffc87-7401-732c-8de3-e6ff6cf32cf4
+                stepCounter: d6cf1648-202f-4e32-8b1d-5e17af2cf468
+            transform: ""
+    cteString: ""
+    description: ""
+    destinationName: ""
+    enabledColumnTestIDs: []
+    materializationOption: ""
+    sourceMapping:
+      - aliases:
+          STG_CENLAR_DAILY_EXTRACT_HISTORY: d6cf1648-202f-4e32-8b1d-5e17af2cf468
+        customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: SILVER
+            nodeName: STG_CENLAR_DAILY_EXTRACT_HISTORY
+        join:
+          joinCondition: FROM {{ ref('SILVER', 'STG_CENLAR_DAILY_EXTRACT_HISTORY') }}
+        name: CENLAR_DAILY_EXTRACT_HISTORY
+        noLinkRefs: []
+  name: CENLAR_DAILY_EXTRACT_HISTORY
+  overrideSQL: false
+  schema: ""
+  sqlType: Stage
+  type: sql
+  version: 1
+type: Node

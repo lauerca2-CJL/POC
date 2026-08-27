@@ -1,0 +1,183 @@
+fileVersion: 1
+id: 8519bcf9-706a-4853-a38f-c27b9f0749b0
+name: STG_DIM_EMPLOYEE
+operation:
+  config:
+    insertStrategy: INSERT
+    postSQL: ""
+    preSQL: ""
+    testsEnabled: true
+    truncateBefore: true
+  database: ""
+  deployEnabled: true
+  description: Employee attributes selected from DIM_EMPLOYEE with a normalized full-name match key for joining to badge access.
+  isMultisource: false
+  locationName: SILVER
+  materializationType: table
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 019ffc6c-75e0-738b-b19d-05a42edce76b
+          stepCounter: 8519bcf9-706a-4853-a38f-c27b9f0749b0
+        config: {}
+        dataType: VARCHAR(16777216)
+        description: ""
+        name: DEPARTMENT
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 11c00dbd-9e1c-406e-8850-3711566b3031
+                stepCounter: c4a444ce-ac8b-4bf9-a24a-ed4708396efc
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 019ffc6c-75e0-738b-b19d-0bbbfb7e0cb6
+          stepCounter: 8519bcf9-706a-4853-a38f-c27b9f0749b0
+        config: {}
+        dataType: VARCHAR(16777216)
+        description: ""
+        name: DATA_SOURCE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 9562a301-fa9c-4331-8915-6b5a8b850315
+                stepCounter: c4a444ce-ac8b-4bf9-a24a-ed4708396efc
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 019ffc6c-75e0-738b-b19d-0d68eeb6a853
+          stepCounter: 8519bcf9-706a-4853-a38f-c27b9f0749b0
+        config: {}
+        dataType: VARCHAR(16777216)
+        description: ""
+        name: EMAIL
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: d4636d7a-46da-4beb-840c-f7dc37b52161
+                stepCounter: c4a444ce-ac8b-4bf9-a24a-ed4708396efc
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 019ffc6c-75e0-738b-b19d-11ef2ab012fd
+          stepCounter: 8519bcf9-706a-4853-a38f-c27b9f0749b0
+        config: {}
+        dataType: VARCHAR(16777216)
+        description: ""
+        name: MOBILITY_PROFILE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 463b62a8-db8e-4871-8101-349faf13fd12
+                stepCounter: c4a444ce-ac8b-4bf9-a24a-ed4708396efc
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 019ffc6c-75e0-738b-b19d-1420224141fd
+          stepCounter: 8519bcf9-706a-4853-a38f-c27b9f0749b0
+        config: {}
+        dataType: VARCHAR(16777216)
+        description: ""
+        name: UKG_FULL_NAME
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: b5332a19-9abe-4885-ad31-271c1a55aacb
+                stepCounter: c4a444ce-ac8b-4bf9-a24a-ed4708396efc
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 019ffc6c-75e0-738b-b19d-18f0967423d8
+          stepCounter: 8519bcf9-706a-4853-a38f-c27b9f0749b0
+        config: {}
+        dataType: VARCHAR(16777216)
+        description: ""
+        name: UKG_EMPLOYEE_NUMBER
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 382dfdc4-823c-459b-b570-dd44886ea0f6
+                stepCounter: c4a444ce-ac8b-4bf9-a24a-ed4708396efc
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 019ffc6c-75e0-738b-b19d-1ef47a94b105
+          stepCounter: 8519bcf9-706a-4853-a38f-c27b9f0749b0
+        config: {}
+        dataType: VARCHAR(16777216)
+        description: ""
+        name: IS_ACTIVE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: b39e7253-f30c-43cd-bf53-78f6605f54a3
+                stepCounter: c4a444ce-ac8b-4bf9-a24a-ed4708396efc
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 019ffc6c-75e0-738b-b19d-235b5f95246f
+          stepCounter: 8519bcf9-706a-4853-a38f-c27b9f0749b0
+        config: {}
+        dataType: VARCHAR(16777216)
+        description: ""
+        name: FULL_TIME_OR_PART_TIME
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: b23bd33c-1085-488d-9b27-a0e21d5dd575
+                stepCounter: c4a444ce-ac8b-4bf9-a24a-ed4708396efc
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 019ffc6c-75e0-738b-b19d-272947611fb9
+          stepCounter: 8519bcf9-706a-4853-a38f-c27b9f0749b0
+        config: {}
+        dataType: VARCHAR(16777216)
+        description: ""
+        name: LOCATION
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 07311022-7e6a-4ace-b432-1065d68e85c0
+                stepCounter: c4a444ce-ac8b-4bf9-a24a-ed4708396efc
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 019ffc6c-75e0-738b-b19d-292589574779
+          stepCounter: 8519bcf9-706a-4853-a38f-c27b9f0749b0
+        config: {}
+        dataType: VARCHAR(16777216)
+        description: ""
+        name: FULL_NAME_MATCH
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: b5332a19-9abe-4885-ad31-271c1a55aacb
+                stepCounter: c4a444ce-ac8b-4bf9-a24a-ed4708396efc
+            transform: LOWER(TRIM("DIM_EMPLOYEE"."FULL_NAME"))
+    cteString: ""
+    description: ""
+    destinationName: ""
+    enabledColumnTestIDs: []
+    materializationOption: ""
+    sourceMapping:
+      - aliases:
+          DIM_EMPLOYEE: c4a444ce-ac8b-4bf9-a24a-ed4708396efc
+        customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: BRONZE
+            nodeName: DIM_EMPLOYEE
+        join:
+          joinCondition: FROM {{ ref('BRONZE', 'DIM_EMPLOYEE') }}
+        name: STG_DIM_EMPLOYEE
+        noLinkRefs: []
+  name: STG_DIM_EMPLOYEE
+  overrideSQL: false
+  schema: ""
+  sqlType: Stage
+  type: sql
+  version: 1
+type: Node

@@ -1,0 +1,171 @@
+fileVersion: 1
+id: 7c5a4bec-88af-422a-9533-c8d951a250be
+name: STG_VERKADA_BADGE_ACCESS
+operation:
+  config:
+    insertStrategy: INSERT
+    postSQL: ""
+    preSQL: ""
+    testsEnabled: true
+    truncateBefore: true
+  database: ""
+  deployEnabled: true
+  description: Verkada badge access events, renamed and typed, filtered to events on or after 2024-04-15 (per request from Dan Nerroth via Russ).
+  isMultisource: false
+  locationName: SILVER
+  materializationType: table
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 019ffc6c-2e88-71ce-a313-e68a6ab75e80
+          stepCounter: 7c5a4bec-88af-422a-9533-c8d951a250be
+        config: {}
+        dataType: DATE
+        description: ""
+        name: DATE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: e159c928-47a2-4fcd-90be-a785e3d0d17a
+                stepCounter: ac4bf622-5a2a-4530-9c5d-0fefce38a4d0
+            transform: CAST("BR_VERKADABADGEACCESS"."LOC_TIMESTAMP" AS DATE)
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 019ffc6c-2e88-71ce-a313-ea4f866d99a6
+          stepCounter: 7c5a4bec-88af-422a-9533-c8d951a250be
+        config: {}
+        dataType: TIME(9)
+        description: ""
+        name: TIME
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: e159c928-47a2-4fcd-90be-a785e3d0d17a
+                stepCounter: ac4bf622-5a2a-4530-9c5d-0fefce38a4d0
+            transform: CAST("BR_VERKADABADGEACCESS"."LOC_TIMESTAMP" AS TIME)
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 019ffc6c-2e88-71ce-a313-ee2d6a3294e9
+          stepCounter: 7c5a4bec-88af-422a-9533-c8d951a250be
+        config: {}
+        dataType: VARCHAR(16777216)
+        description: ""
+        name: DOOR
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: e681d0bb-af3a-4ad7-bdf1-8661ec64a35b
+                stepCounter: ac4bf622-5a2a-4530-9c5d-0fefce38a4d0
+            transform: UPPER("BR_VERKADABADGEACCESS"."LOC_EVENT_INFO_DOORINFO_NAME")
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 019ffc6c-2e88-71ce-a313-f35e0e94ad7d
+          stepCounter: 7c5a4bec-88af-422a-9533-c8d951a250be
+        config: {}
+        dataType: VARCHAR(16777216)
+        description: ""
+        name: BADGE_NUMBER
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 6d2efb40-3614-44c8-b3ff-15359f922577
+                stepCounter: ac4bf622-5a2a-4530-9c5d-0fefce38a4d0
+            transform: UPPER("BR_VERKADABADGEACCESS"."BADGE_NUMBER")
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 019ffc6c-2e88-71ce-a313-f4acc2005194
+          stepCounter: 7c5a4bec-88af-422a-9533-c8d951a250be
+        config: {}
+        dataType: VARCHAR(16777216)
+        description: ""
+        name: LAST_NAME
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: ba89bdc9-4af0-4414-bd76-6c4118144acc
+                stepCounter: ac4bf622-5a2a-4530-9c5d-0fefce38a4d0
+            transform: UPPER("BR_VERKADABADGEACCESS"."LOC_EVENT_INFO_USERINFO_LASTNAME")
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 019ffc6c-2e88-71ce-a313-f8a12da40ab6
+          stepCounter: 7c5a4bec-88af-422a-9533-c8d951a250be
+        config: {}
+        dataType: VARCHAR(16777216)
+        description: ""
+        name: FIRST_NAME
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 46481feb-d48f-436f-95c9-d919fd6b8c2c
+                stepCounter: ac4bf622-5a2a-4530-9c5d-0fefce38a4d0
+            transform: UPPER("BR_VERKADABADGEACCESS"."LOC_EVENT_INFO_USERINFO_FIRSTNAME")
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 019ffc6c-2e88-71ce-a313-fe1cff336c1d
+          stepCounter: 7c5a4bec-88af-422a-9533-c8d951a250be
+        config: {}
+        dataType: VARCHAR(16777216)
+        description: ""
+        name: FULL_NAME
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 10e98909-674c-4f37-becb-bf2ac3eb9713
+                stepCounter: ac4bf622-5a2a-4530-9c5d-0fefce38a4d0
+            transform: TRIM("BR_VERKADABADGEACCESS"."LOC_EVENT_INFO_USERNAME")
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 019ffc6c-2e88-71ce-a314-008e1b46d6ad
+          stepCounter: 7c5a4bec-88af-422a-9533-c8d951a250be
+        config: {}
+        dataType: VARCHAR(16777216)
+        description: ""
+        name: SOURCE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 7868e5c9-f52a-47f7-a6e7-7ba0d3bf69b8
+                stepCounter: ac4bf622-5a2a-4530-9c5d-0fefce38a4d0
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 019ffc6c-2e88-71ce-a314-0484e9dcdab1
+          stepCounter: 7c5a4bec-88af-422a-9533-c8d951a250be
+        config: {}
+        dataType: VARCHAR(16777216)
+        description: ""
+        name: FULL_NAME_MATCH
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 10e98909-674c-4f37-becb-bf2ac3eb9713
+                stepCounter: ac4bf622-5a2a-4530-9c5d-0fefce38a4d0
+            transform: UPPER((TRIM("BR_VERKADABADGEACCESS"."LOC_EVENT_INFO_USERNAME"))
+    cteString: ""
+    description: ""
+    destinationName: ""
+    enabledColumnTestIDs: []
+    materializationOption: ""
+    sourceMapping:
+      - aliases:
+          BR_VERKADABADGEACCESS: ac4bf622-5a2a-4530-9c5d-0fefce38a4d0
+        customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: BRONZE
+            nodeName: BR_VERKADABADGEACCESS
+        join:
+          joinCondition: |-
+            FROM {{ ref('BRONZE', 'BR_VERKADABADGEACCESS') }}
+            WHERE CAST("BR_VERKADABADGEACCESS"."LOC_TIMESTAMP" AS DATE) >= '2024-04-15'
+        name: STG_VERKADA_BADGE_ACCESS
+        noLinkRefs: []
+  name: STG_VERKADA_BADGE_ACCESS
+  overrideSQL: false
+  schema: ""
+  sqlType: Stage
+  type: sql
+  version: 1
+type: Node

@@ -1,0 +1,167 @@
+fileVersion: 1
+id: 7e0c7b98-965c-46f3-a4ac-4e2130f9c86b
+name: STG_GURNEE_BADGE_ACCESS
+operation:
+  config:
+    insertStrategy: INSERT
+    postSQL: ""
+    preSQL: ""
+    testsEnabled: true
+    truncateBefore: true
+  database: ""
+  deployEnabled: true
+  description: Gurnee 2022-2023 badge access history, aligned to the Verkada badge access schema with a constant SOURCE of 'Gurnee'.
+  isMultisource: false
+  locationName: SILVER
+  materializationType: table
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 019ffc6c-5a53-774e-9ec6-5abc12ff1fee
+          stepCounter: 7e0c7b98-965c-46f3-a4ac-4e2130f9c86b
+        config: {}
+        dataType: DATE
+        description: ""
+        name: DATE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 9005b41f-3cee-4830-a918-64500b772bab
+                stepCounter: ebe65e70-7097-4da0-aabf-e2b48460c8c6
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 019ffc6c-5a53-774e-9ec6-5ea39d5bb272
+          stepCounter: 7e0c7b98-965c-46f3-a4ac-4e2130f9c86b
+        config: {}
+        dataType: TIME(9)
+        description: ""
+        name: TIME
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: e733cfec-1668-470a-8165-a4bf313fe1cf
+                stepCounter: ebe65e70-7097-4da0-aabf-e2b48460c8c6
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 019ffc6c-5a53-774e-9ec6-6195283e8b5c
+          stepCounter: 7e0c7b98-965c-46f3-a4ac-4e2130f9c86b
+        config: {}
+        dataType: VARCHAR(16777216)
+        description: ""
+        name: DOOR
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 57580f77-6b5e-4812-be00-1e31a50c755a
+                stepCounter: ebe65e70-7097-4da0-aabf-e2b48460c8c6
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 019ffc6c-5a53-774e-9ec6-64db3b213e82
+          stepCounter: 7e0c7b98-965c-46f3-a4ac-4e2130f9c86b
+        config: {}
+        dataType: VARCHAR(16777216)
+        description: ""
+        name: BADGE_NUMBER
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 2cc3bc49-dbbb-43cd-9f69-de749d766f90
+                stepCounter: ebe65e70-7097-4da0-aabf-e2b48460c8c6
+            transform: "\"SRC_CCU_GURNEEBADGEACCESS2022_2023\".\"Badge Number\""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 019ffc6c-5a53-774e-9ec6-69b9d8fcbc82
+          stepCounter: 7e0c7b98-965c-46f3-a4ac-4e2130f9c86b
+        config: {}
+        dataType: VARCHAR(16777216)
+        description: ""
+        name: LAST_NAME
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: dce0eea7-c0b5-4569-80ea-854e6480e601
+                stepCounter: ebe65e70-7097-4da0-aabf-e2b48460c8c6
+            transform: "\"SRC_CCU_GURNEEBADGEACCESS2022_2023\".\"Last Name\""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 019ffc6c-5a54-70b0-825a-016bc86af7aa
+          stepCounter: 7e0c7b98-965c-46f3-a4ac-4e2130f9c86b
+        config: {}
+        dataType: VARCHAR(16777216)
+        description: ""
+        name: FIRST_NAME
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 22c855b7-ea47-48ca-81be-dd857aae0de6
+                stepCounter: ebe65e70-7097-4da0-aabf-e2b48460c8c6
+            transform: "\"SRC_CCU_GURNEEBADGEACCESS2022_2023\".\"First Name\""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 019ffc6c-5a54-70b0-825a-04af8d6d2d60
+          stepCounter: 7e0c7b98-965c-46f3-a4ac-4e2130f9c86b
+        config: {}
+        dataType: VARCHAR(16777216)
+        description: ""
+        name: FULL_NAME
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 7a8a8e98-1720-4f9c-97f5-5bea4a383ed2
+                stepCounter: ebe65e70-7097-4da0-aabf-e2b48460c8c6
+            transform: TRIM("SRC_CCU_GURNEEBADGEACCESS2022_2023"."Full Name")
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 019ffc6c-5a54-70b0-825a-0bd584696bfb
+          stepCounter: 7e0c7b98-965c-46f3-a4ac-4e2130f9c86b
+        config: {}
+        dataType: VARCHAR(16777216)
+        description: ""
+        name: SOURCE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: "'Gurnee'"
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 019ffc6c-5a54-70b0-825a-0f0f21b5d540
+          stepCounter: 7e0c7b98-965c-46f3-a4ac-4e2130f9c86b
+        config: {}
+        dataType: VARCHAR(16777216)
+        description: ""
+        name: FULL_NAME_MATCH
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 7a8a8e98-1720-4f9c-97f5-5bea4a383ed2
+                stepCounter: ebe65e70-7097-4da0-aabf-e2b48460c8c6
+            transform: LOWER(TRIM("SRC_CCU_GURNEEBADGEACCESS2022_2023"."Full Name"))
+    cteString: ""
+    description: ""
+    destinationName: ""
+    enabledColumnTestIDs: []
+    materializationOption: ""
+    sourceMapping:
+      - aliases:
+          SRC_CCU_GURNEEBADGEACCESS2022_2023: ebe65e70-7097-4da0-aabf-e2b48460c8c6
+        customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: BRONZE
+            nodeName: SRC_CCU_GURNEEBADGEACCESS2022_2023
+        join:
+          joinCondition: FROM {{ ref('BRONZE', 'SRC_CCU_GURNEEBADGEACCESS2022_2023') }}
+        name: STG_GURNEE_BADGE_ACCESS
+        noLinkRefs: []
+  name: STG_GURNEE_BADGE_ACCESS
+  overrideSQL: false
+  schema: ""
+  sqlType: Stage
+  type: sql
+  version: 1
+type: Node
